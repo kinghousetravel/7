@@ -1,0 +1,3287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>King Hous Travel — Health-Oriented Tours & Wellness Retreats</title>
+  <meta name="description" content="Health-oriented tours in Czechia and Europe. Detox programs, spa retreats, yoga and fitness tours for all seasons. King Hous Travel — Brno, Czechia." />
+  <meta name="keywords" content="health tourism Czechia, wellness retreats Europe, seasonal health tours, therapeutic travel, rejuvenation holidays, wellness tours, detox programs, yoga retreats" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0b1220; --primary-90:#0b1220e6; --accent:#d4af37;
+      --text:#e6e9f2; --muted:#aab2c5; --bg:transparent; --bg-soft:rgba(255,255,255,.06);
+      --shadow:0 8px 24px rgba(2,6,23,.12); --radius:14px; --tr:all .25s ease;
+      --glass: rgba(255,255,255,.06);
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji",sans-serif;color:var(--text);background:var(--bg);line-height:1.55;overflow-x:hidden}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .container{width:min(1200px,92%);margin-inline:auto}
+    /* PARTICLES BACKGROUND */
+    #particles-js{
+      position:fixed; inset:0; width:100%; height:100%;
+      background:#0b1220; z-index:-1;
+    }
+    /* NAVBAR */
+    .navbar{position:sticky;top:0;z-index:1000;backdrop-filter:saturate(180%) blur(8px);background:rgba(11,18,32,.75);color:#fff;transition:transform .35s ease, box-shadow .25s ease;border-bottom:1px solid rgba(212,175,55,.15)}
+    .navbar--hidden{transform:translateY(-100%)} .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-badge{width:44px;height:44px;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:var(--accent);box-shadow:0 4px 12px rgba(212,175,55,.35)}
+    .brand-badge img{width:100%;height:100%;object-fit:cover}
+    .brand-title{font-weight:700;font-size:1.15rem;letter-spacing:.2px;color:#fff}
+    .nav-links{display:flex;gap:26px;align-items:center}
+    .nav-links a{color:#fff;font-weight:600;font-size:.98rem;opacity:.95;position:relative;padding:6px 0}
+    .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--accent);transition:width .25s}
+    .nav-links a:hover::after{width:100%}
+    .lang-switch{display:flex;gap:8px;align-items:center}
+    .lang-btn{width:34px;height:34px;border-radius:999px;border:1px solid rgba(212,175,55,.55);color:#fff;background:transparent;display:grid;place-items:center;font-size:.78rem;cursor:pointer;transition:var(--tr)}
+    .lang-btn.active,.lang-btn:hover{background:var(--accent);color:var(--primary)}
+    .icon-btn{width:40px;height:40px;border-radius:999px;border:1px solid rgba(212,175,55,.45);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer;transition:var(--tr)}
+    .icon-btn:hover{background:var(--accent);color:var(--primary)}
+    .cart{position:relative}.cart-badge{position:absolute;top:-6px;right:-6px;width:18px;height:18px;border-radius:999px;background:var(--accent);color:var(--primary);font-size:.7rem;font-weight:800;display:grid;place-items:center}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}.hamburger span{width:26px;height:2px;background:#fff;transition:var(--tr)}
+    .hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)} .hamburger.active span:nth-child(2){opacity:0} .hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    /* Mobile menu */
+    .mobile-menu{position:fixed;inset:0 auto 0 0;width:min(86vw,360px);background:var(--primary-90);color:#fff;transform:translateX(-105%);transition:transform .35s;z-index:999;padding:18px 18px 24px;border-right:1px solid rgba(212,175,55,.35);backdrop-filter:blur(6px)}
+    .mobile-menu.active{transform:none}
+    .mobile-menu .mm-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+    .mobile-menu .mm-links{display:flex;flex-direction:column;gap:14px;margin:14px 0 22px}
+    .mobile-menu .mm-links a{font-weight:600;font-size:1.02rem}
+    .mm-contact{display:grid;gap:10px;background:#0f1830;padding:14px;border-radius:12px;border:1px solid rgba(212,175,55,.2)}
+    .mm-social{display:flex;gap:10px}
+    .dim{position:fixed;inset:0;background:rgba(0,0,0,.35);backdrop-filter:blur(1px);opacity:0;visibility:hidden;transition:var(--tr);z-index:998}
+    .dim.show{opacity:1;visibility:visible}
+    /* HERO */
+    .hero{position:relative;min-height:72svh;display:grid;place-items:center;text-align:center;color:#fff;padding:36px 0}
+    .hero h1{font-size:clamp(28px,5.2vw,56px);line-height:1.12;margin:0 0 14px}
+    .hero p{font-size:clamp(14px,2.2vw,20px);color:#d7dcef;margin:0 0 22px}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-weight:700;transition:var(--tr);border:2px solid var(--accent);background:var(--accent);color:var(--primary)}
+    /* прозрачная "glass" кнопка */
+    .btn.ghost{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));color:#fff;border:1.5px solid rgba(212,175,55,.55);box-shadow:0 10px 24px rgba(212,175,55,.18);backdrop-filter:blur(6px)}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(212,175,55,.25)}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:28px}
+    .stat{background:var(--glass);border:1px solid rgba(212,175,55,.25);border-radius:12px;padding:14px}
+    .stat .n{color:var(--accent);font-weight:800;font-size:clamp(20px,3.5vw,30px)}
+    /* SECTIONS */
+    section{padding:70px 0}
+    .section-head{text-align:center;margin-bottom:30px}
+    .section-head h2{font-size:clamp(24px,4.5vw,40px);margin:0;color:#fff}
+    .bar{width:78px;height:4px;background:var(--accent);border-radius:999px;margin:12px auto 10px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .grid-1{display:grid;grid-template-columns:1fr;gap:18px}
+    .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .25s, box-shadow .25s;height:100%;display:flex;flex-direction:column;color:#e8ecf8; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease;}
+    .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(2,6,23,.16)}
+    .card .media{height:200px;background:#16233c center/cover no-repeat}
+    .card .body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}
+    .muted{color:#b6bfd6}
+    .blog .media{height:210px}.blog .title{font-weight:800;font-size:1.15rem;color:#fff}
+    /* CONTACT */
+    .contact-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+    .info-block{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:20px;color:#e8ecf8}
+    .contact-item{display:flex;gap:12px;align-items:flex-start;padding:12px 0}
+    .contact-item .icon{width:42px;height:42px;border-radius:10px;background:var(--accent);color:var(--primary);display:grid;place-items:center;flex:0 0 42px;box-shadow:0 6px 16px rgba(212,175,55,.3)}
+    .socials{display:flex;gap:10px;margin-top:10px}
+    .socials a{width:42px;height:42px;border-radius:999px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.25);background:transparent;transition:var(--tr);color:#fff}
+    .socials a:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 8px 18px rgba(212,175,55,.22)}
+    .form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);color:#fff}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{font-weight:600;font-size:.92rem}
+    input,select,textarea{width:100%;padding:12px 13px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;outline:none;font:inherit;transition:var(--tr)}
+    textarea{min-height:120px;resize:vertical}
+    input::placeholder,textarea::placeholder{color:#aab2c5}
+    input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(212,175,55,.12)}
+    .submit{margin-top:10px}
+    /* FOOTER */
+    footer{background:rgba(11,18,32,.85);color:#cbd5e1;padding:44px 0;border-top:1px solid rgba(212,175,55,.15)}
+    .f-top{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:22px;align-items:start}
+    .f-brand{display:flex;align-items:center;gap:12px}
+    .f-links a{display:block;padding:6px 0;opacity:.9}
+    .f-links a:hover{color:#fff}
+    .copy{margin-top:16px;text-align:center;font-size:.9rem;color:#9aa3b2}
+    /* CHATBOT */
+    .chat-fab{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:999px;background:var(--accent);color:var(--primary);display:grid;place-items:center;box-shadow:0 12px 26px rgba(212,175,55,.35);cursor:pointer;z-index:1001}
+    .chat-panel{position:fixed;right:18px;bottom:86px;width:min(92vw,380px);max-height:78vh;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.2);border-radius:16px;background:rgba(17,25,43,.98);color:#e8ecf8;box-shadow:var(--shadow);overflow:hidden;transform:translateY(20px);opacity:0;visibility:hidden;transition:var(--tr);z-index:1001}
+    .chat-panel.show{transform:none;opacity:1;visibility:visible}
+    .chat-head{background:rgba(11,18,32,.9);color:#fff;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.15)}
+    .chat-body{padding:14px;overflow:auto;display:grid;gap:10px}
+    .chat-row{display:grid;gap:6px}
+    .chat-row input,.chat-row select,.chat-row textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff}
+    .chat-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;padding:12px}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:.78rem}
+    /* MODALS (checkout) */
+    .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45);opacity:0;visibility:hidden;transition:var(--tr);z-index:1002;padding:14px}
+    .modal.show{opacity:1;visibility:visible}
+    .modal-card{width:min(720px,92vw);background:rgba(17,25,43,.98);border:1px solid rgba(255,255,255,.2);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;color:#e8ecf8}
+    .modal-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:rgba(11,18,32,.9);color:#fff;border-bottom:1px solid rgba(255,255,255,.15)}
+    .modal-body{padding:16px}
+    .pay-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+    .pay-box{border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:14px;background:rgba(255,255,255,.04)}
+    .inline{display:flex;gap:10px}
+    .qr{width:120px;height:120px;background:#0f1830;border-radius:10px;display:grid;place-items:center;border:1px dashed rgba(255,255,255,.25);color:#7f8bad}
+    .badge{padding:4px 8px;border-radius:8px;background:#0f1830;font-size:.78rem;color:#cbd5e1;border:1px solid rgba(255,255,255,.18)}
+    /* MUSIC TIP */
+    .music-tip{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;background:rgba(0,0,0,.7);color:#fff;padding:10px 14px;border-radius:999px;display:none;z-index:1100}
+    .music-tip.show{display:block}
+    /* MUSIC BUTTON */
+    .music-btn {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--primary);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+      z-index: 1001;
+      transition: all 0.3s ease;
+    }
+    .music-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(212, 175, 55, 0.6);
+    }
+    .music-btn i {
+      font-size: 20px;
+    }
+    /* GOLDEN MOUSE TRAIL */
+    .mouse-trail {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.8) 0%, rgba(212, 175, 55, 0) 70%);
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease;
+    }
+    /* TRANSLATE WIDGET */
+    .translate-widget {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(11, 18, 32, 0.8);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
+      padding: 10px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .translate-widget select {
+      background: var(--primary);
+      color: var(--text);
+      border: 1px solid var(--accent);
+      padding: 5px;
+      border-radius: 4px;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .translate-widget i {
+      color: var(--accent);
+    }
+    /* OFFER TRIGGER */
+    .offer-trigger {
+      position: fixed;
+      bottom: 80px;
+      left: 20px;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      z-index: 1000;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+    }
+    
+    /* NOTIFICATION */
+    .notification {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: var(--primary);
+      padding: 12px 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 1002;
+      font-weight: 600;
+      max-width: 80%;
+      text-align: center;
+    }
+    
+    /* LOADER */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(11, 18, 32, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    .loader.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .loader-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(212, 175, 55, 0.3);
+      border-radius: 50%;
+      border-top-color: var(--accent);
+      animation: spin 1s ease-in-out infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* BLOG MODAL STYLES */
+    #blogModal .modal-body {
+      padding: 20px;
+    }
+    
+    #blogModal .media {
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    #blogModalContent h3 {
+      color: var(--accent);
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    
+    #blogModalContent p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    
+    #shareModal .socials {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      transition: var(--tr);
+      text-decoration: none;
+    }
+    
+    #shareModal .socials:hover {
+      background: var(--accent);
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    #articleLink {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 10px 15px;
+      font-family: inherit;
+      outline: none;
+    }
+    
+    #articleLink:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    }
+    
+    /* HEALTH TOURS STYLES */
+    .health-tours-grid {
+      margin-top: 30px;
+    }
+    .season-filter {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .season-btn {
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      cursor: pointer;
+      transition: var(--tr);
+      font-weight: 600;
+    }
+    .season-btn:hover {
+      background: rgba(212, 175, 55, 0.2);
+      border-color: var(--accent);
+    }
+    .season-btn.active {
+      background: var(--accent);
+      color: var(--primary);
+      border-color: var(--accent);
+    }
+    .season-tours {
+      display: none;
+    }
+    .season-tours.active {
+      display: block;
+    }
+    .health-tour .tour-season {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .tour-season.spring {
+      background: rgba(76, 175, 80, 0.2);
+      color: #4CAF50;
+    }
+    .tour-season.summer {
+      background: rgba(255, 193, 7, 0.2);
+      color: #FFC107;
+    }
+    .tour-season.autumn {
+      background: rgba(255, 152, 0, 0.2);
+      color: #FF9800;
+    }
+    .tour-season.winter {
+      background: rgba(33, 150, 243, 0.2);
+      color: #2196F3;
+    }
+    .health-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .benefit-tag {
+      padding: 4px 10px;
+      border-radius: 15px;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .health-planner-section, .wellness-tracker-section {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .health-planner-form {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 25px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .health-plan-result {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 25px;
+      max-width: 800px;
+      margin: 30px auto 0;
+    }
+    .wellness-tracker {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .tracker-tabs {
+      display: flex;
+      background: rgba(11, 18, 32, 0.5);
+    }
+    .tracker-tab {
+      flex: 1;
+      padding: 15px;
+      background: transparent;
+      color: var(--text);
+      border: none;
+      cursor: pointer;
+      transition: var(--tr);
+      font-weight: 600;
+      border-bottom: 3px solid transparent;
+    }
+    .tracker-tab:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .tracker-tab.active {
+      border-bottom-color: var(--accent);
+      color: var(--accent);
+    }
+    .tracker-content {
+      padding: 25px;
+    }
+    .tracker-pane {
+      display: none;
+    }
+    .tracker-pane.active {
+      display: block;
+    }
+    .progress-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .progress-metric {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+    }
+    .metric-icon {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .metric-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 5px;
+    }
+    .metric-label {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+    .progress-bar {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+    .next-steps {
+      margin-top: 30px;
+    }
+    .next-steps h4 {
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+    .next-steps ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .next-steps li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .next-steps li:last-child {
+      border-bottom: none;
+    }
+    .wellness-history {
+      margin-top: 20px;
+    }
+    .history-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+    .history-date {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+    .history-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .history-duration {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 15px;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .history-results {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .result-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .result-label {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .result-value {
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .wellness-goals {
+      margin-top: 20px;
+    }
+    .goal-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+    .goal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .goal-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .goal-progress {
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .goal-description {
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .goal-deadline {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+    #addNewGoal {
+      margin-top: 20px;
+    }
+    
+    /* RESPONSIVE */
+    @media (max-width:1024px){.grid-3{grid-template-columns:repeat(2,1fr)}.contact-wrap{grid-template-columns:1fr}.f-top{grid-template-columns:1fr 1fr}}
+    @media (max-width:820px){.nav-links,.lang-switch,.cart{display:none}.hamburger{display:flex}}
+    @media (max-width:640px){
+      .grid-2,.grid-3{grid-template-columns:1fr}.row{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.f-top{grid-template-columns:1fr}.pay-grid{grid-template-columns:1fr}
+      .chat-actions .btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+      .chat-panel {
+        width: 92vw;
+        right: 4vw;
+      }
+      .offer-trigger {
+        bottom: 70px;
+        left: 10px;
+        right: 10px;
+        justify-content: center;
+      }
+      #blogModal .modal-card {
+        width: 95vw;
+      }
+      .progress-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    /* Accessibility improvements */
+    .user-is-tabbing *:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    
+    /* Touch device styles */
+    .touch-device .card:hover {
+      transform: none;
+    }
+    
+    /* Animation improvements */
+    .card {
+      will-change: transform, opacity;
+    }
+    
+    .btn {
+      will-change: transform;
+    }
+    
+    /* Performance optimization */
+    .lazy-load {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .lazy-load.loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+  
+  <!-- PARTICLES BACKGROUND -->
+  <div id="particles-js"></div>
+  
+  <!-- AUDIO (Deep House 2025) -->
+  <audio id="bgAudio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop preload="auto"></audio>
+  <div id="musicTip" class="music-tip">Tap / Click to enable music 🔊</div>
+  
+  <!-- MUSIC BUTTON -->
+  <button class="music-btn" id="musicToggle" aria-label="Toggle music">
+    <i class="fa-solid fa-music"></i>
+  </button>
+  
+  <!-- TRANSLATE WIDGET -->
+  <div class="translate-widget">
+    <i class="fa-solid fa-language"></i>
+    <select id="languageSelect">
+      <option value="cz">Čeština</option>
+      <option value="de">Deutsch</option>
+      <option value="en" selected>English</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="it">Italiano</option>
+      <option value="pl">Polski</option>
+      <option value="pt">Português</option>
+      <option value="ru">Русский</option>
+      <option value="uk">Українська</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+      <option value="ar">العربية</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+  </div>
+  
+  <!-- GOLDEN MOUSE TRAIL -->
+  <div class="mouse-trail" id="mouseTrail"></div>
+  
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <!-- GIF-logo -->
+        <div class="brand-badge"><img id="logoGif" src="https://picsum.photos/seed/logo/44/44.jpg" alt="KH logo"></div>
+        <div class="brand-title">King Hous Travel</div>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#home" data-translate="home">Home</a>
+        <a href="#services" data-translate="services">Services</a>
+        <a href="#health-tours" data-translate="healthTours">Health Tours</a>
+        <a href="#tours" data-translate="tours">Tours</a>
+        <a href="#reviews" data-translate="reviews">Reviews</a>
+        <a href="#blog" data-translate="blog">Blog</a>
+        <a href="#contact" data-translate="contact">Contact</a>
+      </nav>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="cz" aria-label="Čeština">CZ</button>
+        <button class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
+        <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="uk" aria-label="Українська">UA</button>
+        <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+      </div>
+      <a class="icon-btn cart" href="javascript:void(0)" id="openCheckout" title="Cart">
+        <i class="fa-solid fa-cart-shopping"></i><span class="cart-badge" id="cart-count">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  
+  <!-- Mobile offcanvas -->
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mm-head">
+      <div class="brand" style="gap:10px"><div class="brand-badge" style="width:36px;height:36px"><img src="https://picsum.photos/seed/logo/36/36.jpg" alt=""></div>
+        <div class="brand-title">King Hous Travel</div></div>
+      <button class="icon-btn" id="mmClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="mm-links" aria-label="Mobile">
+      <a href="#home" class="mm-link" data-translate="home">Home</a>
+      <a href="#services" class="mm-link" data-translate="services">Services</a>
+      <a href="#health-tours" class="mm-link" data-translate="healthTours">Health Tours</a>
+      <a href="#tours" class="mm-link" data-translate="tours">Tours</a>
+      <a href="#reviews" class="mm-link" data-translate="reviews">Reviews</a>
+      <a href="#blog" class="mm-link" data-translate="blog">Blog</a>
+      <a href="#contact" class="mm-link" data-translate="contact">Contact</a>
+    </nav>
+    <div class="mm-contact">
+      <strong data-translate="quickContacts">Quick Contacts</strong>
+      <a href="mailto:kinghousetravel69@gmail.com"><i class="fa-solid fa-envelope"></i> kinghousetravel69@gmail.com</a>
+      <a href="tel:+420731473473"><i class="fa-solid fa-phone"></i> +420&nbsp;731&nbsp;473&nbsp;473 (Brno)</a>
+      <div class="mm-social">
+        <a href="https://wa.me/420731473473" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://t.me/+420731473473" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://m.me/kinghousetravel" aria-label="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+      </div>
+    </div>
+  </aside>
+  <div class="dim" id="dim"></div>
+  
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1 data-translate="heroTitle">Discover Health & Wellness Journeys</h1>
+      <p data-translate="heroSubtitle">Transformative health-oriented tours and wellness retreats across all seasons. Professional service from selection to payment.</p>
+      <div class="cta-row">
+        <a href="#health-tours" class="btn ghost" data-translate="viewHealthTours">Explore Health Tours <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn ghost" data-translate="contactUs">Contact Us <i class="fa-solid fa-phone"></i></a>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="n">500+</div><div class="muted" data-translate="toursCount">Tours</div></div>
+        <div class="stat"><div class="n">50+</div><div class="muted" data-translate="countriesCount">Countries</div></div>
+        <div class="stat"><div class="n">10 000+</div><div class="muted" data-translate="clientsCount">Clients</div></div>
+        <div class="stat"><div class="n">15</div><div class="muted" data-translate="experienceYears">Years Experience</div></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- HEALTH TOURS SECTION -->
+  <section id="health-tours">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-translate="healthToursTitle">Seasonal Health-Oriented Tours</h2>
+        <div class="bar"></div>
+        <p class="muted" data-translate="healthToursSubtitle">Discover the perfect health tour for any season of the year</p>
+      </div>
+      
+      <!-- Seasonal Filter -->
+      <div class="season-filter">
+        <button class="season-btn active" data-season="spring" data-translate="spring">Spring</button>
+        <button class="season-btn" data-season="summer" data-translate="summer">Summer</button>
+        <button class="season-btn" data-season="autumn" data-translate="autumn">Autumn</button>
+        <button class="season-btn" data-season="winter" data-translate="winter">Winter</button>
+      </div>
+      
+      <!-- Health Tours Grid -->
+      <div class="health-tours-grid">
+        <!-- Spring Tours -->
+        <div class="season-tours active" data-season="spring">
+          <div class="grid-3">
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season spring">SPRING</div>
+                <h3 data-translate="springDetoxTitle">Detox Retreat in Karlovy Vary</h3>
+                <p class="muted" data-translate="springDetoxDesc">Body cleansing after winter, mineral baths and balanced nutrition</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Detox</span>
+                  <span class="benefit-tag">Renewal</span>
+                  <span class="benefit-tag">Balance</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="790">€790</strong>
+                  <button class="btn ghost add" data-name="Detox Retreat in Karlovy Vary" data-price="790" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+            
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season spring">SPRING</div>
+                <h3 data-translate="springHikingTitle">Active Retreat in Czechia</h3>
+                <p class="muted" data-translate="springHikingDesc">Hiking in national parks, fresh air and fitness in nature</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Cardio</span>
+                  <span class="benefit-tag">Nature</span>
+                  <span class="benefit-tag">Energy</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="590">€590</strong>
+                  <button class="btn ghost add" data-name="Active Retreat in Czechia" data-price="590" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+            
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season spring">SPRING</div>
+                <h3 data-translate="springYogaTitle">Yoga Retreat in Moravia</h3>
+                <p class="muted" data-translate="springYogaDesc">Yoga practices for renewal, meditation and healthy eating</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Flexibility</span>
+                  <span class="benefit-tag">Mindfulness</span>
+                  <span class="benefit-tag">Relaxation</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="690">€690</strong>
+                  <button class="btn ghost add" data-name="Yoga Retreat in Moravia" data-price="690" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        
+        <!-- Summer Tours -->
+        <div class="season-tours" data-season="summer">
+          <div class="grid-3">
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season summer">SUMMER</div>
+                <h3 data-translate="summerVitaminDTitle">Vitamin D on the Adriatic</h3>
+                <p class="muted" data-translate="summerVitaminDDesc">Sea baths, sun procedures and vitamin D enrichment</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Vitamin D</span>
+                  <span class="benefit-tag">Sea Water</span>
+                  <span class="benefit-tag">Immunity</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="1290">€1 290</strong>
+                  <button class="btn ghost add" data-name="Vitamin D on the Adriatic" data-price="1290" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+            
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season summer">SUMMER</div>
+                <h3 data-translate="summerWaterTherapyTitle">Water Therapy in Slovenia</h3>
+                <p class="muted" data-translate="summerWaterTherapyDesc">Thalassotherapy, swimming and water procedures for joint health</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Thalassotherapy</span>
+                  <span class="benefit-tag">Joints</span>
+                  <span class="benefit-tag">Relaxation</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="890">€890</strong>
+                  <button class="btn ghost add" data-name="Water Therapy in Slovenia" data-price="890" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+            
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season summer">SUMMER</div>
+                <h3 data-translate="summerFitnessTitle">Fitness Tour in the Alps</h3>
+                <p class="muted" data-translate="summerFitnessDesc">Mountain hikes, fitness training and healthy eating at altitude</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Endurance</span>
+                  <span class="benefit-tag">Strength</span>
+                  <span class="benefit-tag">Fresh Air</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="1190">€1 190</strong>
+                  <button class="btn ghost add" data-name="Fitness Tour in the Alps" data-price="1190" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        
+        <!-- Autumn Tours -->
+        <div class="season-tours" data-season="autumn">
+          <div class="grid-3">
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season autumn">AUTUMN</div>
+                <h3 data-translate="autumnImmuneTitle">Immune System Boost</h3>
+                <p class="muted" data-translate="autumnImmuneDesc">Herbal procedures, vitamin complexes and spa therapy</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Immunity</span>
+                  <span class="benefit-tag">Herbs</span>
+                  <span class="benefit-tag">Spa</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="790">€790</strong>
+                  <button class="btn ghost add" data-name="Immune System Boost" data-price="790" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+            
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season autumn">AUTUMN</div>
+                <h3 data-translate="autumnStressReliefTitle">Anti-Stress in the Tatras</h3>
+                <p class="muted" data-translate="autumnStressReliefDesc">Meditation, breathing practices and autumn forest walks</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Stress Relief</span>
+                  <span class="benefit-tag">Meditation</span>
+                  <span class="benefit-tag">Harmony</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="690">€690</strong>
+                  <button class="btn ghost add" data-name="Anti-Stress in the Tatras" data-price="690" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+            
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season autumn">AUTUMN</div>
+                <h3 data-translate="autumnDetoxTitle">Autumn Detox in Slovakia</h3>
+                <p class="muted" data-translate="autumnDetoxDesc">Body cleansing, mineral springs and dietary nutrition</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Detox</span>
+                  <span class="benefit-tag">Minerals</span>
+                  <span class="benefit-tag">Diet</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="890">€890</strong>
+                  <button class="btn ghost add" data-name="Autumn Detox in Slovakia" data-price="890" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        
+        <!-- Winter Tours -->
+        <div class="season-tours" data-season="winter">
+          <div class="grid-3">
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season winter">WINTER</div>
+                <h3 data-translate="winterThermalTitle">Thermal Springs Retreat</h3>
+                <p class="muted" data-translate="winterThermalDesc">Hot springs, saunas and winter spa procedures</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Thermal</span>
+                  <span class="benefit-tag">Sauna</span>
+                  <span class="benefit-tag">Relaxation</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="990">€990</strong>
+                  <button class="btn ghost add" data-name="Thermal Springs Retreat" data-price="990" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+            
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season winter">WINTER</div>
+                <h3 data-translate="winterRespiratoryTitle">Respiratory Health</h3>
+                <p class="muted" data-translate="winterRespiratoryDesc">Salt caves, inhalations and breathing exercises</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Breathing</span>
+                  <span class="benefit-tag">Salt</span>
+                  <span class="benefit-tag">Lungs</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="790">€790</strong>
+                  <button class="btn ghost add" data-name="Respiratory Health" data-price="790" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+            
+            <article class="card health-tour">
+              <div class="media" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=60')"></div>
+              <div class="body">
+                <div class="tour-season winter">WINTER</div>
+                <h3 data-translate="winterMindfulnessTitle">Mindfulness & Peace</h3>
+                <p class="muted" data-translate="winterMindfulnessDesc">Meditative retreat, mindfulness practices and mountain silence</p>
+                <div class="health-benefits">
+                  <span class="benefit-tag">Mindfulness</span>
+                  <span class="benefit-tag">Meditation</span>
+                  <span class="benefit-tag">Peace</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+                  <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="890">€890</strong>
+                  <button class="btn ghost add" data-name="Mindfulness & Peace" data-price="890" data-translate="addToCart">Add</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Health Journey Planner -->
+      <div class="health-planner-section">
+        <div class="section-head">
+          <h2 data-translate="healthPlannerTitle">Health Journey Planner</h2>
+          <div class="bar"></div>
+          <p class="muted" data-translate="healthPlannerSubtitle">Create your personalized health journey</p>
+        </div>
+        
+        <div class="health-planner-form">
+          <div class="row">
+            <div>
+              <label for="healthGoal" data-translate="healthGoal">Your Health Goal</label>
+              <select id="healthGoal" name="healthGoal">
+                <option value="" data-translate="selectGoal">Select Goal</option>
+                <option data-translate="detoxGoal">Detox & Cleansing</option>
+                <option data-translate="stressReliefGoal">Stress Relief</option>
+                <option data-translate="fitnessGoal">Improve Fitness</option>
+                <option data-translate="immunityGoal">Boost Immunity</option>
+                <option data-translate="mindfulnessGoal">Mindfulness</option>
+                <option data-translate="weightGoal">Weight Management</option>
+              </select>
+            </div>
+            <div>
+              <label for="preferredSeason" data-translate="preferredSeason">Preferred Season</label>
+              <select id="preferredSeason" name="preferredSeason">
+                <option value="" data-translate="selectSeason">Select Season</option>
+                <option data-translate="spring">Spring</option>
+                <option data-translate="summer">Summer</option>
+                <option data-translate="autumn">Autumn</option>
+                <option data-translate="winter">Winter</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div>
+              <label for="budget" data-translate="budget">Budget (€)</label>
+              <input id="budget" name="budget" type="number" min="0" placeholder="1000">
+            </div>
+            <div>
+              <label for="duration" data-translate="duration">Duration (days)</label>
+              <input id="duration" name="duration" type="number" min="1" placeholder="7">
+            </div>
+          </div>
+          
+          <div>
+            <label for="healthPreferences" data-translate="healthPreferences">Additional Preferences</label>
+            <textarea id="healthPreferences" name="healthPreferences" placeholder="Dietary restrictions, activity preferences, etc."></textarea>
+          </div>
+          
+          <button class="btn" id="planHealthJourney" data-translate="planJourney">Plan Journey</button>
+        </div>
+        
+        <div id="healthPlanResult" class="health-plan-result" style="display: none;">
+          <h3 data-translate="yourPersonalizedPlan">Your Personalized Plan</h3>
+          <div id="planContent"></div>
+          <button class="btn" id="saveHealthPlan" data-translate="savePlan">Save Plan</button>
+        </div>
+      </div>
+      
+      <!-- Wellness Progress Tracker -->
+      <div class="wellness-tracker-section">
+        <div class="section-head">
+          <h2 data-translate="wellnessTrackerTitle">Wellness Progress Tracker</h2>
+          <div class="bar"></div>
+          <p class="muted" data-translate="wellnessTrackerSubtitle">Track your achievements in health journeys</p>
+        </div>
+        
+        <div class="wellness-tracker">
+          <div class="tracker-tabs">
+            <button class="tracker-tab active" data-tab="progress" data-translate="progressTab">Progress</button>
+            <button class="tracker-tab" data-tab="history" data-translate="historyTab">History</button>
+            <button class="tracker-tab" data-tab="goals" data-translate="goalsTab">Goals</button>
+          </div>
+          
+          <div class="tracker-content">
+            <div class="tracker-pane active" id="progressPane">
+              <h3 data-translate="yourWellnessProgress">Your Wellness Progress</h3>
+              <div class="progress-metrics">
+                <div class="progress-metric">
+                  <div class="metric-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                  <div class="metric-value">85%</div>
+                  <div class="metric-label" data-translate="cardioHealth">Heart Health</div>
+                  <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                </div>
+                
+                <div class="progress-metric">
+                  <div class="metric-icon"><i class="fa-solid fa-brain"></i></div>
+                  <div class="metric-value">72%</div>
+                  <div class="metric-label" data-translate="mentalWellness">Mental Wellness</div>
+                  <div class="progress-bar"><div class="progress-fill" style="width: 72%"></div></div>
+                </div>
+                
+                <div class="progress-metric">
+                  <div class="metric-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                  <div class="metric-value">90%</div>
+                  <div class="metric-label" data-translate="physicalFitness">Physical Fitness</div>
+                  <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                </div>
+                
+                <div class="progress-metric">
+                  <div class="metric-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                  <div class="metric-value">78%</div>
+                  <div class="metric-label" data-translate="immunity">Immunity</div>
+                  <div class="progress-bar"><div class="progress-fill" style="width: 78%"></div></div>
+                </div>
+              </div>
+              
+              <div class="next-steps">
+                <h4 data-translate="nextSteps">Next Steps</h4>
+                <ul>
+                  <li data-translate="nextStep1">Complete winter detox course for improved digestion</li>
+                  <li data-translate="nextStep2">Visit spa retreat for stress reduction</li>
+                  <li data-translate="nextStep3">Start morning meditation practice</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="tracker-pane" id="historyPane">
+              <h3 data-translate="wellnessHistory">Wellness Journey History</h3>
+              <div class="wellness-history">
+                <div class="history-item">
+                  <div class="history-date">15/03/2025</div>
+                  <div class="history-title">Spring Detox in Karlovy Vary</div>
+                  <div class="history-duration">5 days</div>
+                  <div class="history-results">
+                    <div class="result-item">
+                      <span class="result-label" data-translate="energyLevel">Energy Level:</span>
+                      <span class="result-value">+25%</span>
+                    </div>
+                    <div class="result-item">
+                      <span class="result-label" data-translate="stressLevel">Stress Level:</span>
+                      <span class="result-value">-30%</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="history-item">
+                  <div class="history-date">10/12/2024</div>
+                  <div class="history-title">Winter Retreat in the Tatras</div>
+                  <div class="history-duration">7 days</div>
+                  <div class="history-results">
+                    <div class="result-item">
+                      <span class="result-label" data-translate="sleepQuality">Sleep Quality:</span>
+                      <span class="result-value">+40%</span>
+                    </div>
+                    <div class="result-item">
+                      <span class="result-label" data-translate="mindfulness">Mindfulness:</span>
+                      <span class="result-value">+35%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tracker-pane" id="goalsPane">
+              <h3 data-translate="wellnessGoals">Wellness Goals</h3>
+              <div class="wellness-goals">
+                <div class="goal-item">
+                  <div class="goal-header">
+                    <div class="goal-title" data-translate="goal1Title">Improve Sleep Quality</div>
+                    <div class="goal-progress">60%</div>
+                  </div>
+                  <div class="goal-description" data-translate="goal1Desc">Achieve 7-8 hours of quality sleep every night</div>
+                  <div class="goal-deadline" data-translate="goalDeadline">Deadline: 30/06/2025</div>
+                  <div class="progress-bar"><div class="progress-fill" style="width: 60%"></div></div>
+                </div>
+                
+                <div class="goal-item">
+                  <div class="goal-header">
+                    <div class="goal-title" data-translate="goal2Title">Reduce Stress Level</div>
+                    <div class="goal-progress">45%</div>
+                  </div>
+                  <div class="goal-description" data-translate="goal2Desc">Practice daily relaxation and meditation techniques</div>
+                  <div class="goal-deadline" data-translate="goalDeadline">Deadline: 15/07/2025</div>
+                  <div class="progress-bar"><div class="progress-fill" style="width: 45%"></div></div>
+                </div>
+                
+                <div class="goal-item">
+                  <div class="goal-header">
+                    <div class="goal-title" data-translate="goal3Title">Improve Physical Endurance</div>
+                    <div class="goal-progress">75%</div>
+                  </div>
+                  <div class="goal-description" data-translate="goal3Desc">Participate in fitness programs and active tours</div>
+                  <div class="goal-deadline" data-translate="goalDeadline">Deadline: 31/08/2025</div>
+                  <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+                </div>
+              </div>
+              
+              <button class="btn" id="addNewGoal" data-translate="addNewGoal">Add New Goal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-translate="servicesTitle">Our Services</h2>
+        <div class="bar"></div>
+        <p class="muted" data-translate="servicesSubtitle">Complete service: selection, booking, visas, insurance, transfers, excursions.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=60')"></div>
+          <div class="body">
+            <h3 data-translate="service1Title">Individual Journeys</h3>
+            <p class="muted" data-translate="service1Desc">Routes tailored to your style and budget.</p>
+            <div style="margin-top:auto"><a class="btn ghost" href="#contact" data-translate="moreInfo">More</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=60')"></div>
+          <div class="body">
+            <h3 data-translate="service2Title">Hotel Reservations</h3>
+            <p class="muted" data-translate="service2Desc">Verified partners and resorts.</p>
+            <div style="margin-top:auto"><a class="btn ghost" href="#contact" data-translate="moreInfo">More</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1491369173060-3f5b5d1d2f3a?auto=format&fit=crop&w=1200&q=60')"></div>
+          <div class="body">
+            <h3 data-translate="service3Title">Flights and Insurance</h3>
+            <p class="muted" data-translate="service3Desc">Optimal flights + travel insurance.</p>
+            <div style="margin-top:auto"><a class="btn ghost" href="#contact" data-translate="moreInfo">More</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- TOURS (prices in EUR) -->
+  <section id="tours">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-translate="toursTitle">Popular Tours</h2>
+        <div class="bar"></div>
+        <p class="muted" data-translate="toursSubtitle">Choose your dream tour — from city breaks to wellness holidays.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=60')"></div>
+          <div class="body">
+            <h3 data-translate="tour1Title">Romantic Paris</h3>
+            <p class="muted" data-translate="tour1Desc">3 days / 2 nights • 2–4 people</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+              <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="499">€499</strong>
+              <button class="btn ghost add" data-name="Romantic Paris" data-price="499" data-translate="addToCart">Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1543429776-2782fcdfa3da?auto=format&fit=crop&w=1200&q=60')"></div>
+          <div class="body">
+            <h3 data-translate="tour2Title">Maldives — Water Villas</h3>
+            <p class="muted" data-translate="tour2Desc">7 days / 6 nights • 2 people</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+              <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="1890">€1 890</strong>
+              <button class="btn ghost add" data-name="Maldives — Water Villas" data-price="1890" data-translate="addToCart">Add</button>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=60')"></div>
+          <div class="body">
+            <h3 data-translate="tour3Title">Dubai — Oriental Tales</h3>
+            <p class="muted" data-translate="tour3Desc">5 days / 4 nights • 2–6 people</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
+              <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="890">€890</strong>
+              <button class="btn ghost add" data-name="Dubai — Oriental Tales" data-price="890" data-translate="addToCart">Add</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- REVIEWS – foreigners -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-translate="reviewsTitle">Customer Reviews</h2><div class="bar"></div>
+      </div>
+      <div class="grid-3">
+        <article class="card"><div class="body"><h3>Michael R. (UK)</h3><p class="muted">"Everything was seamless — flights, hotel, transfers. Highly recommend!"</p></div></article>
+        <article class="card"><div class="body"><h3>Giulia F. (IT)</h3><p class="muted">"Organizzazione perfetta! Il team ha curato ogni dettaglio."</p></div></article>
+        <article class="card"><div class="body"><h3>Thomas K. (DE)</h3><p class="muted">"Top Service und super Ausflüge. Gerne wieder!"</p></div></article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- BLOG -->
+  <section id="blog" class="blog">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-translate="blogTitle">Our Blog</h2><div class="bar"></div>
+        <p class="muted" data-translate="blogSubtitle">Useful tips, stories and news from the travel world</p>
+      </div>
+      <div class="grid-3">
+        <article class="card blog">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60')"></div>
+          <div class="body">
+            <div class="muted"><i class="fa-regular fa-calendar"></i> 15/06/2025</div>
+            <div class="title" data-translate="blog1Title">Top 10 Summer Destinations in Europe</div>
+            <p class="muted" data-translate="blog1Desc">From the Mediterranean to the Alps — a selection of must-sees.</p>
+            <a class="btn ghost blog-read" href="#" data-blog-id="1" data-translate="readMore">Read More</a>
+          </div>
+        </article>
+        <article class="card blog">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1200&q=60')"></div>
+          <div class="body">
+            <div class="muted"><i class="fa-regular fa-calendar"></i> 02/06/2025</div>
+            <div class="title" data-translate="blog2Title">How to Pack a Suitcase Without Overloading</div>
+            <p class="muted" data-translate="blog2Desc">Must-have list + organizational tricks.</p>
+            <a class="btn ghost blog-read" href="#" data-blog-id="2" data-translate="readMore">Read More</a>
+          </div>
+        </article>
+        <article class="card blog">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1519451243450-1a7c1a6b8a9c?auto=format&fit=crop&w=1200&q=60')"></div>
+          <div class="body">
+            <div class="muted"><i class="fa-regular fa-calendar"></i> 20/05/2025</div>
+            <div class="title" data-translate="blog3Title">Best Beaches for Perfect Relaxation</div>
+            <p class="muted" data-translate="blog3Desc">Maldives, Caribbean and secret spots.</p>
+            <a class="btn ghost blog-read" href="#" data-blog-id="3" data-translate="readMore">Read More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-translate="contactTitle">Contact Us</h2><div class="bar"></div>
+        <p class="muted" data-translate="contactSubtitle">Write or call — we'll respond quickly and help with your selection.</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="info-block">
+          <div class="contact-item"><div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div><strong data-translate="address">Address</strong><div class="muted">Brno, Czechia</div></div>
+          </div>
+          <div class="contact-item"><div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <div><strong data-translate="phone">Phone</strong><div><a href="tel:+420731473473">+420&nbsp;731&nbsp;473&nbsp;473</a></div></div>
+          </div>
+          <div class="contact-item"><div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <div><strong data-translate="email">Email</strong><div><a href="mailto:kinghousetravel69@gmail.com">kinghousetravel69@gmail.com</a></div></div>
+          </div>
+          <div class="contact-item"><div class="icon"><i class="fa-solid fa-clock"></i></div>
+            <div><strong data-translate="openingHours">Opening Hours</strong><div class="muted" data-translate="hours">Mon–Fri: 09:00–18:00 • Sat: 10:00–15:00</div></div>
+          </div>
+          <div class="socials">
+            <a href="https://wa.me/420731473473" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://t.me/+420731473473" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://m.me/kinghousetravel" aria-label="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+            <a href="mailto:kinghousetravel69@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <form class="form" id="contactForm" novalidate>
+          <div class="row">
+            <div><label for="name" data-translate="yourName">Your Name</label><input id="name" name="name" placeholder="Name" required /></div>
+            <div><label for="email" data-translate="email">Email</label><input id="email" name="email" type="email" placeholder="your@email.com" required /></div>
+          </div>
+          <div class="row">
+            <div><label for="phone" data-translate="phone">Phone</label><input id="phone" name="phone" placeholder="+420 731 473 473" /></div>
+            <div>
+              <label for="topic" data-translate="topic">Topic</label>
+              <select id="topic" name="topic" required>
+                <option value="" data-translate="selectTopic">Select Topic</option>
+                <option data-translate="bookingTopic">Tour Booking</option>
+                <option data-translate="infoTopic">Tour Information</option>
+                <option data-translate="cooperationTopic">Cooperation</option>
+                <option data-translate="otherTopic">Other</option>
+              </select>
+            </div>
+          </div>
+          <div><label for="msg" data-translate="message">Message</label><textarea id="msg" name="msg" placeholder="Write your question..." required></textarea></div>
+          <button class="btn ghost submit" type="submit" data-translate="sendMessage">Send Message</button>
+          <div id="formNote" class="muted" style="margin-top:8px"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="f-top">
+        <div>
+          <div class="f-brand">
+            <div class="brand-badge" style="width:38px;height:38px"><img src="https://picsum.photos/seed/logo/38/38.jpg" alt=""></div>
+            <strong>King Hous Travel</strong>
+          </div>
+          <p class="muted" data-translate="footerDesc">Exclusive journeys, wellness retreats and city weekends. Base — Brno, Czechia.</p>
+        </div>
+        <div class="f-links">
+          <strong data-translate="pages">Pages</strong>
+          <a href="#services" data-translate="services">Services</a>
+          <a href="#health-tours" data-translate="healthTours">Health Tours</a>
+          <a href="#tours" data-translate="tours">Tours</a>
+          <a href="#blog" data-translate="blog">Blog</a>
+          <a href="#contact" data-translate="contact">Contact</a>
+        </div>
+        <div class="f-links">
+          <strong data-translate="contacts">Contacts</strong>
+          <a href="mailto:kinghousetravel69@gmail.com"><i class="fa-solid fa-envelope"></i> kinghousetravel69@gmail.com</a>
+          <a href="tel:+420731473473"><i class="fa-solid fa-phone"></i> +420 731 473 473</a>
+          <a href="https://wa.me/420731473473"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="https://t.me/+420731473473"><i class="fa-brands fa-telegram"></i> Telegram</a>
+        </div>
+      </div>
+      <div class="copy" data-translate="copyright">© <span id="year"></span> King Hous Travel. All rights reserved.</div>
+    </div>
+  </footer>
+  
+  <!-- CHATBOT FAB -->
+  <button class="chat-fab" id="chatFab" title="Travel bot"><i class="fa-solid fa-comments"></i></button>
+  <div class="chat-panel" id="chatPanel" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="chat-head">
+      <div><strong>Travel Bot</strong> <span class="pill">beta</span></div>
+      <button class="icon-btn" id="chatClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chat-body">
+      <div class="chat-row"><label data-translate="destination">Where do you want to go?</label><input id="bPlace" placeholder="Paris / Maldives / Dubai..." /></div>
+      <div class="chat-row inline">
+        <div style="flex:1"><label data-translate="from">From</label><input id="bFrom" type="date" /></div>
+        <div style="flex:1"><label data-translate="to">To</label><input id="bTo" type="date" /></div>
+      </div>
+      <div class="chat-row inline">
+        <div style="flex:1"><label data-translate="people">People</label><input id="bPeople" type="number" min="1" value="2" /></div>
+        <div style="flex:1"><label data-translate="budget">Budget (€)</label><input id="bBudget" type="number" min="0" placeholder="1000" /></div>
+      </div>
+      <div class="chat-row"><label data-translate="wishes">Preferences</label><textarea id="bNotes" placeholder="Hotel 4*, wellness, excursions..."></textarea></div>
+    </div>
+    <div class="chat-actions">
+      <a class="btn ghost" id="sendWA"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a class="btn ghost" id="sendTG"><i class="fa-brands fa-telegram"></i> Telegram</a>
+      <a class="btn" id="sendMail"><i class="fa-solid fa-envelope"></i> Email</a>
+    </div>
+  </div>
+  
+  <!-- CHECKOUT MODAL -->
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <strong data-translate="checkoutTitle">Complete Order</strong>
+        <button class="icon-btn" id="closeCheckout" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div id="cartItems" class="badge" data-translate="emptyCart">Cart is empty</div>
+        <div class="pay-grid" style="margin-top:12px">
+          <!-- Card (DEMO) -->
+          <div class="pay-box">
+            <div class="inline" style="justify-content:space-between;align-items:center">
+              <h3 style="margin:0" data-translate="cardPayment">Card Payment</h3>
+              <span class="badge">DEMO</span>
+            </div>
+            <div class="row" style="margin-top:8px">
+              <div><label data-translate="cardName">Name on card</label><input id="ccName" placeholder="TETIANA KOTOLUP" /></div>
+              <div><label data-translate="cardNumber">Card number</label><input id="ccNum" inputmode="numeric" maxlength="19" placeholder="4242 4242 4242 4242" /></div>
+            </div>
+            <div class="row">
+              <div><label data-translate="cardExpiry">Expiry</label><input id="ccExp" placeholder="MM/YY" maxlength="5" /></div>
+              <div><label data-translate="cardCvv">CVV</label><input id="ccCvv" placeholder="123" maxlength="4" /></div>
+            </div>
+            <button class="btn" id="payCard" style="margin-top:8px" data-translate="payButton">Pay</button>
+            <div id="cardNote" class="muted" style="margin-top:6px"></div>
+          </div>
+          <!-- Alt methods -->
+          <div class="pay-box">
+            <h3 style="margin:0" data-translate="otherPayment">Other Methods</h3>
+            <p class="muted" data-translate="paymentDesc">You can pay via PayPal or SEPA bank transfer in EUR.</p>
+            <a class="btn ghost" id="payPaypal" href="mailto:kinghousetravel69@gmail.com?subject=PayPal%20Invoice%20Request">
+              <i class="fa-brands fa-paypal"></i> <span data-translate="paypalRequest">Request PayPal Invoice</span>
+            </a>
+            <div style="margin-top:8px">
+              <div class="badge">SEPA Bank Transfer (€)</div>
+              <div class="muted" style="margin-top:6px">
+                <div>IBAN: <strong>—</strong> • BIC: <strong>—</strong></div>
+                <div data-translate="invoiceRequest">Write to us for issuing an invoice with details.</div>
+              </div>
+            </div>
+            <div style="margin-top:12px" class="inline">
+              <div class="qr">QR</div>
+              <div class="muted"><strong data-translate="cryptoPayment">USDT TRC20 (optional)</strong><br/>TFA319WbHsYfhYqVa67vXiwboxioBQM82R</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- SPECIAL OFFER MODAL -->
+  <div class="modal" id="offerModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <strong data-translate="specialOffer">Special Offer</strong>
+        <button class="icon-btn" id="closeOffer" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h3 style="color: var(--accent); margin-top: 0;" data-translate="offerTitle">10% Discount on Your First Journey!</h3>
+          <p data-translate="offerDesc">Leave your email and get a discount code for 10% off any tour.</p>
+        </div>
+        <form id="offerForm">
+          <div style="margin-bottom: 15px;">
+            <label for="offerEmail" data-translate="yourEmail">Your Email</label>
+            <input type="email" id="offerEmail" placeholder="your@email.com" required style="width: 100%;">
+          </div>
+          <button type="submit" class="btn" style="width: 100%;" data-translate="getDiscount">Get Discount</button>
+        </form>
+        <div id="offerSuccess" style="display: none; text-align: center; margin-top: 15px; color: var(--accent); font-weight: 600;">
+          <span data-translate="promoCode">Promo Code:</span> <strong id="promoCodeValue">TRAVEL10</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- BLOG POST MODAL -->
+  <div class="modal" id="blogModal" aria-hidden="true">
+    <div class="modal-card" style="max-width: 900px;">
+      <div class="modal-head">
+        <strong id="blogModalTitle" data-translate="blogArticle">Blog Article</strong>
+        <button class="icon-btn" id="closeBlogModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
+        <div id="blogModalImage" class="media" style="height: 300px; margin-bottom: 20px;"></div>
+        <div id="blogModalContent"></div>
+        <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+          <div id="blogModalMeta" class="muted"></div>
+          <button class="btn ghost" id="shareBlogPost" data-translate="shareArticle">
+            <i class="fa-solid fa-share-nodes"></i> Share
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- SHARE ARTICLE MODAL -->
+  <div class="modal" id="shareModal" aria-hidden="true">
+    <div class="modal-card" style="max-width: 500px;">
+      <div class="modal-head">
+        <strong data-translate="shareArticle">Share Article</strong>
+        <button class="icon-btn" id="closeShareModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <p data-translate="shareVia">Share via:</p>
+          <div style="display: flex; justify-content: center; gap: 15px; margin-top: 15px;">
+            <a href="#" id="shareFacebook" class="socials" style="text-decoration: none;">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" id="shareTwitter" class="socials" style="text-decoration: none;">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" id="shareLinkedIn" class="socials" style="text-decoration: none;">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#" id="shareWhatsApp" class="socials" style="text-decoration: none;">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="#" id="copyLink" class="socials" style="text-decoration: none; cursor: pointer;">
+              <i class="fa-solid fa-link"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <label data-translate="directLink">Direct Link:</label>
+          <div style="display: flex; margin-top: 8px;">
+            <input type="text" id="articleLink" readonly style="flex: 1; border-radius: 10px 0 0 10px;">
+            <button id="copyLinkBtn" class="btn" style="border-radius: 0 10px 10px 0; padding: 0 15px;">
+              <i class="fa-solid fa-copy"></i>
+            </button>
+          </div>
+          <div id="copyNotification" style="display: none; text-align: center; margin-top: 10px; color: var(--accent);">
+            <span data-translate="linkCopied">Link copied!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- LIBS -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    // ===== Полифиллы для старых браузеров =====
+    if (!window.Intl) {
+      // Простой полифилл для форматирования валюты
+      window.Intl = {
+        NumberFormat: function(locale, options) {
+          return {
+            format: function(value) {
+              return '€' + value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+          };
+        }
+      };
+    }
+    
+    // ===== Глобальные переменные =====
+    let currentLang = 'en';
+    const cart = [];
+    let mouseX = 0, mouseY = 0;
+    let trailX = 0, trailY = 0;
+    let isPlaying = false;
+    
+    // ===== Переводы =====
+    const translations = {
+      en: {
+        home: "Home",
+        services: "Services",
+        healthTours: "Health Tours",
+        tours: "Tours",
+        reviews: "Reviews",
+        blog: "Blog",
+        contact: "Contact",
+        heroTitle: "Discover Health & Wellness Journeys",
+        heroSubtitle: "Transformative health-oriented tours and wellness retreats across all seasons. Professional service from selection to payment.",
+        viewHealthTours: "Explore Health Tours",
+        contactUs: "Contact Us",
+        toursCount: "Tours",
+        countriesCount: "Countries",
+        clientsCount: "Clients",
+        experienceYears: "Years Experience",
+        servicesTitle: "Our Services",
+        servicesSubtitle: "Complete service: selection, booking, visas, insurance, transfers, excursions.",
+        service1Title: "Individual Journeys",
+        service1Desc: "Routes tailored to your style and budget.",
+        service2Title: "Hotel Reservations",
+        service2Desc: "Verified partners and resorts.",
+        service3Title: "Flights and Insurance",
+        service3Desc: "Optimal flights + travel insurance.",
+        moreInfo: "More",
+        healthToursTitle: "Seasonal Health-Oriented Tours",
+        healthToursSubtitle: "Discover the perfect health tour for any season of the year",
+        spring: "Spring",
+        summer: "Summer",
+        autumn: "Autumn",
+        winter: "Winter",
+        springDetoxTitle: "Detox Retreat in Karlovy Vary",
+        springDetoxDesc: "Body cleansing after winter, mineral baths and balanced nutrition",
+        springHikingTitle: "Active Retreat in Czechia",
+        springHikingDesc: "Hiking in national parks, fresh air and fitness in nature",
+        springYogaTitle: "Yoga Retreat in Moravia",
+        springYogaDesc: "Yoga practices for renewal, meditation and healthy eating",
+        summerVitaminDTitle: "Vitamin D on the Adriatic",
+        summerVitaminDDesc: "Sea baths, sun procedures and vitamin D enrichment",
+        summerWaterTherapyTitle: "Water Therapy in Slovenia",
+        summerWaterTherapyDesc: "Thalassotherapy, swimming and water procedures for joint health",
+        summerFitnessTitle: "Fitness Tour in the Alps",
+        summerFitnessDesc: "Mountain hikes, fitness training and healthy eating at altitude",
+        autumnImmuneTitle: "Immune System Boost",
+        autumnImmuneDesc: "Herbal procedures, vitamin complexes and spa therapy",
+        autumnStressReliefTitle: "Anti-Stress in the Tatras",
+        autumnStressReliefDesc: "Meditation, breathing practices and autumn forest walks",
+        autumnDetoxTitle: "Autumn Detox in Slovakia",
+        autumnDetoxDesc: "Body cleansing, mineral springs and dietary nutrition",
+        winterThermalTitle: "Thermal Springs Retreat",
+        winterThermalDesc: "Hot springs, saunas and winter spa procedures",
+        winterRespiratoryTitle: "Respiratory Health",
+        winterRespiratoryDesc: "Salt caves, inhalations and breathing exercises",
+        winterMindfulnessTitle: "Mindfulness & Peace",
+        winterMindfulnessDesc: "Meditative retreat, mindfulness practices and mountain silence",
+        healthPlannerTitle: "Health Journey Planner",
+        healthPlannerSubtitle: "Create your personalized health journey",
+        healthGoal: "Your Health Goal",
+        selectGoal: "Select Goal",
+        detoxGoal: "Detox & Cleansing",
+        stressReliefGoal: "Stress Relief",
+        fitnessGoal: "Improve Fitness",
+        immunityGoal: "Boost Immunity",
+        mindfulnessGoal: "Mindfulness",
+        weightGoal: "Weight Management",
+        preferredSeason: "Preferred Season",
+        selectSeason: "Select Season",
+        budget: "Budget (€)",
+        duration: "Duration (days)",
+        healthPreferences: "Additional Preferences",
+        planJourney: "Plan Journey",
+        yourPersonalizedPlan: "Your Personalized Plan",
+        savePlan: "Save Plan",
+        wellnessTrackerTitle: "Wellness Progress Tracker",
+        wellnessTrackerSubtitle: "Track your achievements in health journeys",
+        progressTab: "Progress",
+        historyTab: "History",
+        goalsTab: "Goals",
+        yourWellnessProgress: "Your Wellness Progress",
+        cardioHealth: "Heart Health",
+        mentalWellness: "Mental Wellness",
+        physicalFitness: "Physical Fitness",
+        immunity: "Immunity",
+        nextSteps: "Next Steps",
+        nextStep1: "Complete winter detox course for improved digestion",
+        nextStep2: "Visit spa retreat for stress reduction",
+        nextStep3: "Start morning meditation practice",
+        wellnessHistory: "Wellness Journey History",
+        energyLevel: "Energy Level:",
+        stressLevel: "Stress Level:",
+        sleepQuality: "Sleep Quality:",
+        mindfulness: "Mindfulness:",
+        wellnessGoals: "Wellness Goals",
+        goal1Title: "Improve Sleep Quality",
+        goal1Desc: "Achieve 7-8 hours of quality sleep every night",
+        goalDeadline: "Deadline:",
+        goal2Title: "Reduce Stress Level",
+        goal2Desc: "Practice daily relaxation and meditation techniques",
+        goal3Title: "Improve Physical Endurance",
+        goal3Desc: "Participate in fitness programs and active tours",
+        addNewGoal: "Add New Goal",
+        toursTitle: "Popular Tours",
+        toursSubtitle: "Choose your dream tour — from city breaks to wellness holidays.",
+        tour1Title: "Romantic Paris",
+        tour1Desc: "3 days / 2 nights • 2–4 people",
+        tour2Title: "Maldives — Water Villas",
+        tour2Desc: "7 days / 6 nights • 2 people",
+        tour3Title: "Dubai — Oriental Tales",
+        tour3Desc: "5 days / 4 nights • 2–6 people",
+        addToCart: "Add",
+        added: "Added ✓",
+        reviewsTitle: "Customer Reviews",
+        blogTitle: "Our Blog",
+        blogSubtitle: "Useful tips, stories and news from the travel world",
+        blog1Title: "Top 10 Summer Destinations in Europe",
+        blog1Desc: "From the Mediterranean to the Alps — a selection of must-sees.",
+        blog2Title: "How to Pack a Suitcase Without Overloading",
+        blog2Desc: "Must-have list + organizational tricks.",
+        blog3Title: "Best Beaches for Perfect Relaxation",
+        blog3Desc: "Maldives, Caribbean and secret spots.",
+        readMore: "Read More",
+        contactTitle: "Contact Us",
+        contactSubtitle: "Write or call — we'll respond quickly and help with your selection.",
+        address: "Address",
+        phone: "Phone",
+        email: "Email",
+        openingHours: "Opening Hours",
+        hours: "Mon–Fri: 09:00–18:00 • Sat: 10:00–15:00",
+        yourName: "Your Name",
+        topic: "Topic",
+        selectTopic: "Select Topic",
+        bookingTopic: "Tour Booking",
+        infoTopic: "Tour Information",
+        cooperationTopic: "Cooperation",
+        otherTopic: "Other",
+        message: "Message",
+        sendMessage: "Send Message",
+        formSuccess: "Thank you! We will contact you at ",
+        pages: "Pages",
+        contacts: "Contacts",
+        footerDesc: "Exclusive journeys, wellness retreats and city weekends. Base — Brno, Czechia.",
+        copyright: "© ",
+        emptyCart: "Cart is empty",
+        total: "TOTAL",
+        checkoutTitle: "Complete Order",
+        cardPayment: "Card Payment",
+        cardName: "Name on card",
+        cardNumber: "Card number",
+        cardExpiry: "Expiry",
+        cardCvv: "CVV",
+        payButton: "Pay",
+        cardError: "Error: check card details.",
+        paymentSuccess: "Payment in demo mode was successful ✅. We will send you a confirmation by email.",
+        otherPayment: "Other Methods",
+        paymentDesc: "You can pay via PayPal or SEPA bank transfer in EUR.",
+        paypalRequest: "Request PayPal invoice",
+        invoiceRequest: "Write to us for issuing an invoice with details.",
+        cryptoPayment: "USDT TRC20 (optional)",
+        destination: "Where do you want to go?",
+        from: "From",
+        to: "To",
+        people: "People",
+        budget: "Budget (€)",
+        wishes: "Preferences",
+        chatMessage: "Hello! I want to book a tour.",
+        contactInfo: "Contact",
+        quickContacts: "Quick Contacts",
+        specialOffer: "Special Offer",
+        offerTitle: "10% Discount on Your First Journey!",
+        offerDesc: "Leave your email and get a discount code for 10% off any tour.",
+        yourEmail: "Your Email",
+        getDiscount: "Get Discount",
+        promoCode: "Promo Code:",
+        cartReminder: "You have items in your cart. Complete your order!",
+        completeOrder: "Complete Order",
+        blogArticle: "Blog Article",
+        shareArticle: "Share",
+        shareVia: "Share via:",
+        directLink: "Direct Link:",
+        linkCopied: "Link copied!"
+      },
+      cz: {
+        home: "Domů",
+        services: "Služby",
+        healthTours: "Zdravotní túry",
+        tours: "Zájezdy",
+        reviews: "Recenze",
+        blog: "Blog",
+        contact: "Kontakt",
+        heroTitle: "Objevte zdraví a wellness cesty",
+        heroSubtitle: "Proměňující zdravotní túry a wellness pobyty ve všech ročních obdobích. Profesionální servis od výběru po platbu.",
+        viewHealthTours: "Prozkoumat zdravotní túry",
+        contactUs: "Kontaktujte nás",
+        toursCount: "Zájezdů",
+        countriesCount: "Zemí",
+        clientsCount: "Klientů",
+        experienceYears: "Let zkušeností",
+        servicesTitle: "Naše služby",
+        servicesSubtitle: "Kompletní servis: výběr, rezervace, víza, pojištění, transfery, výlety.",
+        service1Title: "Individuální cesty",
+        service1Desc: "Trasy na míru vašemu stylu a rozpočtu.",
+        service2Title: "Rezervace hotelů",
+        service2Desc: "Prověření partneři a resorty.",
+        service3Title: "Lety a pojištění",
+        service3Desc: "Optimální lety + cestovní pojištění.",
+        moreInfo: "Více",
+        healthToursTitle: "Sezónní zdravotní túry",
+        healthToursSubtitle: "Objevte perfektní zdravotní túru pro jakékoliv roční období",
+        spring: "Jaro",
+        summer: "Léto",
+        autumn: "Podzim",
+        winter: "Zima",
+        springDetoxTitle: "Detox pobyt v Karlových Varech",
+        springDetoxDesc: "Očištění těla po zimě, minerální lázně a vyvážená výživa",
+        springHikingTitle: "Aktivní pobyt v Česku",
+        springHikingDesc: "Pěší túry po národních parcích, čerstvý vzduch a fitness v přírodě",
+        springYogaTitle: "Joga pobyt na Moravě",
+        springYogaDesc: "Jogové praktiky pro obnovu, meditace a zdravé stravování",
+        summerVitaminDTitle: "Vitamin D na Jadranu",
+        summerVitaminDDesc: "Mořské koupele, sluneční procedury a obohacování vitaminem D",
+        summerWaterTherapyTitle: "Vodní terapie ve Slovinsku",
+        summerWaterTherapyDesc: "Talasoterapie, plavání a vodní procedury pro zdraví kloubů",
+        summerFitnessTitle: "Fitness túr v Alpách",
+        summerFitnessDesc: "Horské túry, fitness tréninky a zdravé stravování v nadmořské výšce",
+        autumnImmuneTitle: "Posílení imunity",
+        autumnImmuneDesc: "Bylinné procedury, vitaminové komplexy a lázeňská terapie",
+        autumnStressReliefTitle: "Antistres v Tatrách",
+        autumnStressReliefDesc: "Meditace, dechová cvičení a procházky podzimním lesem",
+        autumnDetoxTitle: "Podzimní detox na Slovensku",
+        autumnDetoxDesc: "Očištění těla, minerální prameny a dietetická výživa",
+        winterThermalTitle: "Termální prameny",
+        winterThermalDesc: "Horké prameny, sauny a zimní lázeňské procedury",
+        winterRespiratoryTitle: "Zdraví dýchání",
+        winterRespiratoryDesc: "Solné jeskyně, inhalace a dechová cvičení",
+        winterMindfulnessTitle: "Mindfulness a klid",
+        winterMindfulnessDesc: "Meditativní pobyt, praktiky mindfulness a ticho hor",
+        healthPlannerTitle: "Plánovač zdravotních cest",
+        healthPlannerSubtitle: "Vytvořte si personalizovanou zdravotní cestu",
+        healthGoal: "Váš zdravotní cíl",
+        selectGoal: "Vyberte cíl",
+        detoxGoal: "Detox a očištění",
+        stressReliefGoal: "Snížení stresu",
+        fitnessGoal: "Zlepšení fyzické kondice",
+        immunityGoal: "Posílení imunity",
+        mindfulnessGoal: "Mindfulness",
+        weightGoal: "Řízení hmotnosti",
+        preferredSeason: "Preferované období",
+        selectSeason: "Vyberte období",
+        budget: "Rozpočet (€)",
+        duration: "Délka (dní)",
+        healthPreferences: "Další preference",
+        planJourney: "Plánovat cestu",
+        yourPersonalizedPlan: "Váš personalizovaný plán",
+        savePlan: "Uložit plán",
+        wellnessTrackerTitle: "Tracker wellness pokroku",
+        wellnessTrackerSubtitle: "Sledujte své úspěchy ve zdravotních cestách",
+        progressTab: "Pokrok",
+        historyTab: "Historie",
+        goalsTab: "Cíle",
+        yourWellnessProgress: "Váš wellness pokrok",
+        cardioHealth: "Zdraví srdce",
+        mentalWellness: "Duševní wellness",
+        physicalFitness: "Fyzická kondice",
+        immunity: "Imunita",
+        nextSteps: "Další kroky",
+        nextStep1: "Dokončete zimní detox kurz pro zlepšení trávení",
+        nextStep2: "Navštivte lázeňský pobyt pro snížení stresu",
+        nextStep3: "Začněte s ranní meditací",
+        wellnessHistory: "Historie wellness cest",
+        energyLevel: "Úroveň energie:",
+        stressLevel: "Úroveň stresu:",
+        sleepQuality: "Kvalita spánku:",
+        mindfulness: "Mindfulness:",
+        wellnessGoals: "Wellness cíle",
+        goal1Title: "Zlepšit kvalitu spánku",
+        goal1Desc: "Dosáhnout 7-8 hodin kvalitního spánku každou noc",
+        goalDeadline: "Termín:",
+        goal2Title: "Snížit úroveň stresu",
+        goal2Desc: "Praktikovat denní relaxační a meditační techniky",
+        goal3Title: "Zlepšit fyzickou vytrvalost",
+        goal3Desc: "Účastnit se fitness programů a aktivních túr",
+        addNewGoal: "Přidat nový cíl",
+        toursTitle: "Populární zájezdy",
+        toursSubtitle: "Vyberte si vysněnou túru — od městských víkendů po wellness pobyty.",
+        tour1Title: "Romantická Paříž",
+        tour1Desc: "3 dny / 2 noci • 2–4 osoby",
+        tour2Title: "Maledivy — vodní vily",
+        tour2Desc: "7 dní / 6 nocí • 2 osoby",
+        tour3Title: "Dubaj — orientální příběhy",
+        tour3Desc: "5 dní / 4 noci • 2–6 osob",
+        addToCart: "Přidat",
+        added: "Přidáno ✓",
+        reviewsTitle: "Recenze zákazníků",
+        blogTitle: "Náš blog",
+        blogSubtitle: "Užitečné tipy, příběhy a novinky ze světa cestování",
+        blog1Title: "Top 10 letních destinací v Evropě",
+        blog1Desc: "Od Středomoří po Alpy — výběr must-see míst.",
+        blog2Title: "Jak sbalit kufr bez přeplnění",
+        blog2Desc: "Seznam must-have + organizační triky.",
+        blog3Title: "Nejlepší pláže pro dokonalou relaxaci",
+        blog3Desc: "Maledivy, Karibik a tajná místa.",
+        readMore: "Číst více",
+        contactTitle: "Kontaktujte nás",
+        contactSubtitle: "Napište nebo zavolejte — rychle odpovíme a pomůžeme s výběrem.",
+        address: "Adresa",
+        phone: "Telefon",
+        email: "Email",
+        openingHours: "Otevírací doba",
+        hours: "Po–Pá: 09:00–18:00 • So: 10:00–15:00",
+        yourName: "Vaše jméno",
+        topic: "Téma",
+        selectTopic: "Vyberte téma",
+        bookingTopic: "Rezervace zájezdu",
+        infoTopic: "Informace o zájezdu",
+        cooperationTopic: "Spolupráce",
+        otherTopic: "Jiné",
+        message: "Zpráva",
+        sendMessage: "Odeslat zprávu",
+        formSuccess: "Děkujeme! Ozveme se vám na ",
+        pages: "Stránky",
+        contacts: "Kontakty",
+        footerDesc: "Exkluzivní cesty, wellness pobyty a městské víkendy. Základna — Brno, Česko.",
+        copyright: "© ",
+        emptyCart: "Košík je prázdný",
+        total: "CELKEM",
+        checkoutTitle: "Dokončit objednávku",
+        cardPayment: "Platba kartou",
+        cardName: "Jméno na kartě",
+        cardNumber: "Číslo karty",
+        cardExpiry: "Expirace",
+        cardCvv: "CVV",
+        payButton: "Zaplatit",
+        cardError: "Chyba: zkontrolujte údaje o kartě.",
+        paymentSuccess: "Platba v demo režimu byla úspěšná ✅. Pošleme vám potvrzení emailem.",
+        otherPayment: "Další metody",
+        paymentDesc: "Můžete zaplatit přes PayPal nebo SEPA bankovní převod v EUR.",
+        paypalRequest: "Požádat o PayPal fakturu",
+        invoiceRequest: "Napište nám pro vystavení faktury s údaji.",
+        cryptoPayment: "USDT TRC20 (volitelné)",
+        destination: "Kam chcete jet?",
+        from: "Od",
+        to: "Do",
+        people: "Osoby",
+        budget: "Rozpočet (€)",
+        wishes: "Přání",
+        chatMessage: "Dobrý den! Chci si rezervovat zájezd.",
+        contactInfo: "Kontakt",
+        quickContacts: "Rychlé kontakty",
+        specialOffer: "Speciální nabídka",
+        offerTitle: "10% sleva na vaši první cestu!",
+        offerDesc: "Zanechte email a získejte slevový kód na 10% na jakýkoliv zájezd.",
+        yourEmail: "Váš email",
+        getDiscount: "Získat slevu",
+        promoCode: "Slevový kód:",
+        cartReminder: "Máte položky v košíku. Dokončete objednávku!",
+        completeOrder: "Dokončit objednávku",
+        blogArticle: "Článek na blogu",
+        shareArticle: "Sdílet",
+        shareVia: "Sdílet přes:",
+        directLink: "Přímý odkaz:",
+        linkCopied: "Odkaz zkopírován!"
+      }
+      // Добавьте переводы для других языков по аналогии
+    };
+    
+    // ===== Инициализация =====
+    document.addEventListener('DOMContentLoaded', function() {
+      // Показываем загрузчик на короткое время для демонстрации
+      setTimeout(() => {
+        document.getElementById('loader').classList.remove('active');
+      }, 1000);
+      
+      // Устанавливаем год в футере
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Загружаем сохраненный язык
+      loadSavedLanguage();
+      
+      // Инициализируем все компоненты
+      initParticles();
+      initNavbar();
+      initMobileMenu();
+      initCart();
+      initChat();
+      initMusic();
+      initMouseTrail();
+      initLanguageSwitcher();
+      initHealthTours();
+      initBlogModal();
+      initOfferModal();
+      initFormValidation();
+      initAnimations();
+      initAccessibility();
+      initPerformanceOptimizations();
+    });
+    
+    // ===== Particles =====
+    function initParticles() {
+      if (typeof particlesJS !== 'undefined') {
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 70, density: { enable: true, value_area: 800 } },
+            color: { value: "#d4af37" },
+            shape: { type: "circle" },
+            opacity: { value: 0.6 },
+            size: { value: 3, random: true },
+            line_linked: { enable: true, distance: 150, color: "#d4af37", opacity: 0.35, width: 1 },
+            move: { enable: true, speed: 1.6, out_mode: "out" }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } },
+            modes: { repulse: { distance: 110 }, push: { particles_nb: 4 } }
+          },
+          retina_detect: true
+        });
+      }
+    }
+    
+    // ===== Navbar =====
+    function initNavbar() {
+      const nav = document.getElementById('navbar');
+      let lastY = window.scrollY, ticking = false;
+      let scrollTimeout;
+      
+      function onScroll() {
+        const y = window.scrollY;
+        if (y > 60 && y > lastY) {
+          nav.classList.add('navbar--hidden');
+        } else {
+          nav.classList.remove('navbar--hidden');
+        }
+        lastY = y;
+        ticking = false;
+      }
+      
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(onScroll);
+          ticking = true;
+          
+          // Сбрасываем флаг после выполнения анимации
+          scrollTimeout = setTimeout(() => {
+            ticking = false;
+          }, 100);
+        }
+      });
+    }
+    
+    // ===== Mobile Menu =====
+    function initMobileMenu() {
+      const burger = document.getElementById('hamburger');
+      const mm = document.getElementById('mobileMenu');
+      const mmClose = document.getElementById('mmClose');
+      const dim = document.getElementById('dim');
+      const mmLinks = mm.querySelectorAll('a');
+      
+      function openMM() {
+        mm.classList.add('active');
+        dim.classList.add('show');
+        burger.classList.add('active');
+        burger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeMM() {
+        mm.classList.remove('active');
+        dim.classList.remove('show');
+        burger.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      
+      burger.addEventListener('click', () => {
+        mm.classList.contains('active') ? closeMM() : openMM();
+      });
+      
+      mmClose.addEventListener('click', closeMM);
+      dim.addEventListener('click', closeMM);
+      
+      mmLinks.forEach(a => {
+        a.addEventListener('click', closeMM);
+      });
+    }
+    
+    // ===== Cart =====
+    function initCart() {
+      const countEl = document.getElementById('cart-count');
+      const checkoutModal = document.getElementById('checkoutModal');
+      
+      // Обновление счетчика корзины
+      function updateCartCount() {
+        countEl.textContent = cart.length;
+      }
+      
+      // Добавление товара в корзину
+      document.querySelectorAll('.add').forEach(btn => {
+        btn.addEventListener('click', () => {
+          cart.push({
+            name: btn.dataset.name,
+            price: +btn.dataset.price
+          });
+          updateCartCount();
+          
+          // Визуальная обратная связь
+          const originalText = btn.textContent;
+          btn.textContent = translations[currentLang].added || 'Added ✓';
+          setTimeout(() => {
+            btn.textContent = originalText;
+          }, 1200);
+          
+          // Сбрасываем флаг напоминания о корзине
+          try {
+            localStorage.removeItem('kingHousCartReminderShown');
+          } catch (e) {
+            console.error('Ошибка при сбросе флага напоминания:', e);
+          }
+        });
+      });
+      
+      // Открытие модального окна корзины
+      document.getElementById('openCheckout').addEventListener('click', () => {
+        renderCart();
+        checkoutModal.classList.add('show');
+      });
+      
+      // Закрытие модального окна корзины
+      document.getElementById('closeCheckout').addEventListener('click', () => {
+        checkoutModal.classList.remove('show');
+      });
+      
+      // Форматирование цен
+      document.querySelectorAll('.price').forEach(el => {
+        const p = +el.dataset.price;
+        el.textContent = formatCurrency(p);
+      });
+      
+      // Обработка оплаты картой
+      const ccNum = document.getElementById('ccNum');
+      ccNum.addEventListener('input', e => {
+        let v = e.target.value.replace(/\D/g, '').slice(0, 16);
+        // Добавляем пробел после каждых 4 цифр
+        v = v.replace(/(\d{4})/g, '$1 ').trim();
+        e.target.value = v;
+      });
+      
+      document.getElementById('payCard').addEventListener('click', () => {
+        if (cart.length === 0) {
+          showNotification(translations[currentLang].emptyCart || 'Cart is empty');
+          return;
+        }
+        
+        const ok = document.getElementById('ccName').value && 
+                  document.getElementById('ccNum').value.length >= 19 && 
+                  document.getElementById('ccExp').value && 
+                  document.getElementById('ccCvv').value.length >= 3;
+        
+        const note = document.getElementById('cardNote');
+        if (!ok) {
+          note.textContent = translations[currentLang].cardError || 'Error: check card details.';
+          return;
+        }
+        
+        note.textContent = translations[currentLang].paymentSuccess || 'Payment in demo mode was successful ✅. We will send you a confirmation by email.';
+        setTimeout(() => {
+          checkoutModal.classList.remove('show');
+        }, 2000);
+      });
+    }
+    
+    // ===== Chat =====
+    function initChat() {
+      const chatFab = document.getElementById('chatFab');
+      const chatPanel = document.getElementById('chatPanel');
+      const chatClose = document.getElementById('chatClose');
+      
+      chatFab.addEventListener('click', () => {
+        loadChatData();
+        chatPanel.classList.toggle('show');
+      });
+      
+      chatClose.addEventListener('click', () => {
+        saveChatData();
+        chatPanel.classList.remove('show');
+      });
+      
+      // Сохранение данных чата
+      function saveChatData() {
+        const chatData = {
+          place: document.getElementById('bPlace') ? document.getElementById('bPlace').value : '',
+          from: document.getElementById('bFrom') ? document.getElementById('bFrom').value : '',
+          to: document.getElementById('bTo') ? document.getElementById('bTo').value : '',
+          people: document.getElementById('bPeople') ? document.getElementById('bPeople').value : '2',
+          budget: document.getElementById('bBudget') ? document.getElementById('bBudget').value : '',
+          notes: document.getElementById('bNotes') ? document.getElementById('bNotes').value : ''
+        };
+        
+        try {
+          localStorage.setItem('kingHousChatData', JSON.stringify(chatData));
+        } catch (e) {
+          console.error('Ошибка при сохранении данных чата:', e);
+        }
+      }
+      
+      // Загрузка данных чата
+      function loadChatData() {
+        try {
+          const savedData = localStorage.getItem('kingHousChatData');
+          if (savedData) {
+            const chatData = JSON.parse(savedData);
+            if (document.getElementById('bPlace')) document.getElementById('bPlace').value = chatData.place || '';
+            if (document.getElementById('bFrom')) document.getElementById('bFrom').value = chatData.from || '';
+            if (document.getElementById('bTo')) document.getElementById('bTo').value = chatData.to || '';
+            if (document.getElementById('bPeople')) document.getElementById('bPeople').value = chatData.people || '2';
+            if (document.getElementById('bBudget')) document.getElementById('bBudget').value = chatData.budget || '';
+            if (document.getElementById('bNotes')) document.getElementById('bNotes').value = chatData.notes || '';
+          }
+        } catch (e) {
+          console.error('Ошибка при загрузке данных чата:', e);
+        }
+      }
+      
+      // Отправка сообщения
+      function buildMessage() {
+        const place = document.getElementById('bPlace').value || '-';
+        const from = document.getElementById('bFrom').value || '-';
+        const to = document.getElementById('bTo').value || '-';
+        const people = document.getElementById('bPeople').value || '2';
+        const budget = document.getElementById('bBudget').value || '-';
+        const notes = document.getElementById('bNotes').value || '-';
+        
+        return `${translations[currentLang].chatMessage || 'Hello! I want to book a tour.'}\n${translations[currentLang].destination || 'Destination'}: ${place}\n${translations[currentLang].from || 'Dates'}: ${from} → ${to}\n${translations[currentLang].people || 'People'}: ${people}\n${translations[currentLang].budget || 'Budget'}: €${budget}\n${translations[currentLang].wishes || 'Preferences'}: ${notes}\n\n${translations[currentLang].contactInfo || 'Contact'}: +420 731 473 473 | kinghousetravel69@gmail.com`;
+      }
+      
+      document.getElementById('sendWA').addEventListener('click', () => {
+        const txt = encodeURIComponent(buildMessage());
+        window.open(`https://wa.me/420731473473?text=${txt}`, '_blank');
+      });
+      
+      document.getElementById('sendTG').addEventListener('click', () => {
+        const txt = encodeURIComponent(buildMessage());
+        window.open(`https://t.me/share/url?url=&text=${txt}`, '_blank');
+      });
+      
+      document.getElementById('sendMail').addEventListener('click', () => {
+        const txt = encodeURIComponent(buildMessage());
+        window.location.href = `mailto:kinghousetravel69@gmail.com?subject=Tour%20request&body=${txt}`;
+      });
+    }
+    
+    // ===== Music =====
+    function initMusic() {
+      const audio = document.getElementById('bgAudio');
+      const tip = document.getElementById('musicTip');
+      const musicToggle = document.getElementById('musicToggle');
+      
+      audio.volume = 0.6;
+      
+      // Инициализация кнопки музыки
+      musicToggle.innerHTML = '<i class="fa-solid fa-music"></i>';
+      
+      // Переключение музыки
+      musicToggle.addEventListener('click', () => {
+        if (isPlaying) {
+          audio.pause();
+          musicToggle.innerHTML = '<i class="fa-solid fa-music"></i>';
+          isPlaying = false;
+        } else {
+          audio.play().catch(e => console.log("Autoplay prevented:", e));
+          musicToggle.innerHTML = '<i class="fa-solid fa-pause"></i>';
+          isPlaying = true;
+        }
+      });
+      
+      // Обновление кнопки при завершении воспроизведения
+      audio.addEventListener('ended', () => {
+        musicToggle.innerHTML = '<i class="fa-solid fa-music"></i>';
+        isPlaying = false;
+      });
+      
+      // Попытка автозапуска с запасным вариантом
+      audio.play().catch(error => {
+        console.error('Ошибка воспроизведения аудио:', error);
+        tip.classList.add('show');
+        
+        const enable = () => {
+          audio.play().catch(e => console.error('Повторная ошибка воспроизведения:', e))
+            .finally(() => tip.classList.remove('show'));
+          
+          musicToggle.innerHTML = '<i class="fa-solid fa-pause"></i>';
+          isPlaying = true;
+          
+          // Удаляем обработчики после первого взаимодействия
+          window.removeEventListener('touchstart', enable);
+          window.removeEventListener('mousedown', enable);
+        };
+        
+        // Используем touchstart и mousedown для поддержки мобильных устройств
+        window.addEventListener('touchstart', enable, { once: true });
+        window.addEventListener('mousedown', enable, { once: true });
+      });
+    }
+    
+    // ===== Mouse Trail =====
+    function initMouseTrail() {
+      const mouseTrail = document.getElementById('mouseTrail');
+      
+      // Для мыши
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        mouseTrail.style.opacity = '0.7';
+      });
+      
+      // Для сенсорных экранов
+      document.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+          mouseX = e.touches[0].clientX;
+          mouseY = e.touches[0].clientY;
+          mouseTrail.style.opacity = '0.7';
+        }
+      });
+      
+      // Анимация следа
+      function animateTrail() {
+        // Плавное движение следа за курсором
+        trailX += (mouseX - trailX) * 0.1;
+        trailY += (mouseY - trailY) * 0.1;
+        
+        mouseTrail.style.left = `${trailX}px`;
+        mouseTrail.style.top = `${trailY}px`;
+        
+        requestAnimationFrame(animateTrail);
+      }
+      
+      animateTrail();
+      
+      // Скрытие следа при остановке движения
+      let trailTimeout;
+      document.addEventListener('mousemove', () => {
+        clearTimeout(trailTimeout);
+        trailTimeout = setTimeout(() => {
+          mouseTrail.style.opacity = '0';
+        }, 1000);
+      });
+    }
+    
+    // ===== Language Switcher =====
+    function initLanguageSwitcher() {
+      // Переключение языков в навигации
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentLang = btn.getAttribute('data-lang');
+          updateTranslations();
+          
+          // Сохранение выбранного языка
+          try {
+            localStorage.setItem('kingHousLanguage', currentLang);
+          } catch (e) {
+            console.error('Ошибка при сохранении языка:', e);
+          }
+        });
+      });
+      
+      // Переключение языков в виджете
+      document.getElementById('languageSelect').addEventListener('change', (e) => {
+        currentLang = e.target.value;
+        updateTranslations();
+        
+        // Обновление активной кнопки в навигации
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-lang') === currentLang);
+        });
+        
+        // Сохранение выбранного языка
+        try {
+          localStorage.setItem('kingHousLanguage', currentLang);
+        } catch (e) {
+          console.error('Ошибка при сохранении языка:', e);
+        }
+      });
+    }
+    
+    // Загрузка сохраненного языка
+    function loadSavedLanguage() {
+      try {
+        const savedLang = localStorage.getItem('kingHousLanguage');
+        if (savedLang && translations[savedLang]) {
+          currentLang = savedLang;
+          
+          // Обновление активной кнопки в навигации
+          document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === currentLang);
+          });
+          
+          // Обновление выбранного языка в виджете
+          document.getElementById('languageSelect').value = currentLang;
+          
+          // Обновление текстов на странице
+          updateTranslations();
+        }
+      } catch (e) {
+        console.error('Ошибка при загрузке языка:', e);
+      }
+    }
+    
+    // Обновление переводов
+    function updateTranslations() {
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[currentLang] && translations[currentLang][key]) {
+          element.textContent = translations[currentLang][key];
+        }
+      });
+      
+      // Обновление placeholder'ов
+      document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        if (key && translations[currentLang] && translations[currentLang][key]) {
+          element.placeholder = translations[currentLang][key];
+        }
+      });
+      
+      // Обновление опций в select
+      document.querySelectorAll('select option').forEach(option => {
+        const key = option.getAttribute('data-translate');
+        if (key && translations[currentLang] && translations[currentLang][key]) {
+          option.textContent = translations[currentLang][key];
+        }
+      });
+    }
+    
+    // ===== Health Tours =====
+    function initHealthTours() {
+      const seasonBtns = document.querySelectorAll('.season-btn');
+      const seasonTours = document.querySelectorAll('.season-tours');
+      
+      seasonBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Обновление активной кнопки
+          seasonBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          
+          // Показ соответствующего сезона
+          const season = btn.getAttribute('data-season');
+          seasonTours.forEach(tours => {
+            if (tours.getAttribute('data-season') === season) {
+              tours.classList.add('active');
+            } else {
+              tours.classList.remove('active');
+            }
+          });
+          
+          // Анимация карточек
+          animateCards();
+        });
+      });
+      
+      // Планировщик здоровья
+      const planHealthJourneyBtn = document.getElementById('planHealthJourney');
+      const healthPlanResult = document.getElementById('healthPlanResult');
+      const planContent = document.getElementById('planContent');
+      const saveHealthPlanBtn = document.getElementById('saveHealthPlan');
+      
+      planHealthJourneyBtn.addEventListener('click', () => {
+        const healthGoal = document.getElementById('healthGoal').value;
+        const preferredSeason = document.getElementById('preferredSeason').value;
+        const budget = document.getElementById('budget').value;
+        const duration = document.getElementById('duration').value;
+        const healthPreferences = document.getElementById('healthPreferences').value;
+        
+        if (!healthGoal || !preferredSeason) {
+          showNotification(translations[currentLang].fillRequiredFields || 'Please fill in all required fields');
+          return;
+        }
+        
+        // Генерация плана
+        let planHTML = '<div class="health-plan">';
+        
+        // Заголовок плана
+        planHTML += `<h4>${translations[currentLang].yourHealthGoal || 'Your Health Goal'}: ${healthGoal}</h4>`;
+        planHTML += `<p><strong>${translations[currentLang].preferredSeason || 'Preferred Season'}:</strong> ${preferredSeason}</p>`;
+        
+        if (budget) {
+          planHTML += `<p><strong>${translations[currentLang].budget || 'Budget'}:</strong> €${budget}</p>`;
+        }
+        
+        if (duration) {
+          planHTML += `<p><strong>${translations[currentLang].duration || 'Duration'}:</strong> ${duration} ${translations[currentLang].days || 'days'}</p>`;
+        }
+        
+        if (healthPreferences) {
+          planHTML += `<p><strong>${translations[currentLang].healthPreferences || 'Additional Preferences'}:</strong> ${healthPreferences}</p>`;
+        }
+        
+        // Рекомендуемые туры
+        planHTML += '<h5 style="margin-top: 20px;">' + (translations[currentLang].recommendedTours || 'Recommended Tours') + '</h5>';
+        planHTML += '<ul>';
+        
+        // Примеры рекомендуемых туров в зависимости от цели и сезона
+        if (healthGoal === 'detox' || healthGoal === 'Detox & Cleansing') {
+          if (preferredSeason === 'spring') {
+            planHTML += '<li>' + (translations[currentLang].springDetoxTitle || 'Detox Retreat in Karlovy Vary') + '</li>';
+          } else if (preferredSeason === 'autumn') {
+            planHTML += '<li>' + (translations[currentLang].autumnDetoxTitle || 'Autumn Detox in Slovakia') + '</li>';
+          } else {
+            planHTML += '<li>' + (translations[currentLang].winterThermalTitle || 'Thermal Springs Retreat') + '</li>';
+          }
+        } else if (healthGoal === 'stress' || healthGoal === 'Stress Relief') {
+          if (preferredSeason === 'autumn') {
+            planHTML += '<li>' + (translations[currentLang].autumnStressReliefTitle || 'Anti-Stress in the Tatras') + '</li>';
+          } else {
+            planHTML += '<li>' + (translations[currentLang].winterMindfulnessTitle || 'Mindfulness & Peace') + '</li>';
+          }
+        } else if (healthGoal === 'fitness' || healthGoal === 'Improve Fitness') {
+          if (preferredSeason === 'spring') {
+            planHTML += '<li>' + (translations[currentLang].springHikingTitle || 'Active Retreat in Czechia') + '</li>';
+          } else if (preferredSeason === 'summer') {
+            planHTML += '<li>' + (translations[currentLang].summerFitnessTitle || 'Fitness Tour in the Alps') + '</li>';
+          } else {
+            planHTML += '<li>' + (translations[currentLang].winterThermalTitle || 'Thermal Springs Retreat') + '</li>';
+          }
+        } else {
+          // Общие рекомендации
+          if (preferredSeason === 'spring') {
+            planHTML += '<li>' + (translations[currentLang].springYogaTitle || 'Yoga Retreat in Moravia') + '</li>';
+          } else if (preferredSeason === 'summer') {
+            planHTML += '<li>' + (translations[currentLang].summerVitaminDTitle || 'Vitamin D on the Adriatic') + '</li>';
+          } else if (preferredSeason === 'autumn') {
+            planHTML += '<li>' + (translations[currentLang].autumnImmuneTitle || 'Immune System Boost') + '</li>';
+          } else {
+            planHTML += '<li>' + (translations[currentLang].winterRespiratoryTitle || 'Respiratory Health') + '</li>';
+          }
+        }
+        
+        planHTML += '</ul>';
+        
+        // Дополнительные рекомендации
+        planHTML += '<h5 style="margin-top: 20px;">' + (translations[currentLang].additionalRecommendations || 'Additional Recommendations') + '</h5>';
+        planHTML += '<ul>';
+        planHTML += '<li>' + (translations[currentLang].recommendation1 || 'Consult with your doctor before starting any health program') + '</li>';
+        planHTML += '<li>' + (translations[currentLang].recommendation2 || 'Stay hydrated and maintain a balanced diet during your journey') + '</li>';
+        planHTML += '<li>' + (translations[currentLang].recommendation3 || 'Take time to rest and fully enjoy the experience') + '</li>';
+        planHTML += '</ul>';
+        
+        planHTML += '</div>';
+        
+        // Отображение плана
+        planContent.innerHTML = planHTML;
+        healthPlanResult.style.display = 'block';
+        
+        // Прокрутка к результату
+        healthPlanResult.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      
+      // Сохранение плана
+      saveHealthPlanBtn.addEventListener('click', () => {
+        showNotification(translations[currentLang].planSaved || 'Your health plan has been saved!');
+      });
+      
+      // Трекер wellness
+      const trackerTabs = document.querySelectorAll('.tracker-tab');
+      const trackerPanes = document.querySelectorAll('.tracker-pane');
+      
+      trackerTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Обновление активной вкладки
+          trackerTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          
+          // Показ соответствующей панели
+          const tabName = tab.getAttribute('data-tab');
+          trackerPanes.forEach(pane => {
+            if (pane.id === tabName + 'Pane') {
+              pane.classList.add('active');
+            } else {
+              pane.classList.remove('active');
+            }
+          });
+        });
+      });
+      
+      // Добавление новой цели
+      document.getElementById('addNewGoal').addEventListener('click', () => {
+        showNotification(translations[currentLang].addGoalFeature || 'Add new goal feature coming soon!');
+      });
+    }
+    
+    // ===== Blog Modal =====
+    function initBlogModal() {
+      const blogModal = document.getElementById('blogModal');
+      const closeBlogModal = document.getElementById('closeBlogModal');
+      const blogModalTitle = document.getElementById('blogModalTitle');
+      const blogModalImage = document.getElementById('blogModalImage');
+      const blogModalContent = document.getElementById('blogModalContent');
+      const blogModalMeta = document.getElementById('blogModalMeta');
+      const shareBlogPost = document.getElementById('shareBlogPost');
+      const shareModal = document.getElementById('shareModal');
+      const closeShareModal = document.getElementById('closeShareModal');
+      const copyLinkBtn = document.getElementById('copyLinkBtn');
+      const copyNotification = document.getElementById('copyNotification');
+      
+      // Данные для блогов
+      const blogPosts = {
+        1: {
+          title: {
+            en: "Top 10 Summer Destinations in Europe",
+            cz: "Top 10 letních destinací v Evropě"
+          },
+          image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60",
+          date: "15/06/2025",
+          content: {
+            en: `
+              <h3>Introduction</h3>
+              <p>Summer is the perfect time to explore the diverse and beautiful destinations across Europe. From pristine beaches to historic cities, Europe offers something for every type of traveler. In this article, we'll explore the top 10 summer destinations that should be on your travel list.</p>
+              
+              <h3>1. Santorini, Greece</h3>
+              <p>Known for its stunning sunsets, white-washed buildings, and crystal-clear waters, Santorini is a dream destination for many. The island offers a unique blend of natural beauty, ancient history, and vibrant culture.</p>
+              
+              <h3>2. Amalfi Coast, Italy</h3>
+              <p>The Amalfi Coast is a stretch of coastline on the southern coast of the Sorrentine Peninsula in Italy. Famous for its picturesque towns, cliffs, and beaches, it's a perfect destination for a relaxing summer getaway.</p>
+              
+              <h3>3. Barcelona, Spain</h3>
+              <p>Barcelona combines the energy of a bustling city with the relaxation of beach life. With its unique architecture, vibrant nightlife, and delicious cuisine, it's a must-visit destination in Europe.</p>
+            `,
+            cz: `
+              <h3>Úvod</h3>
+              <p>Léto je ideální čas pro objevování rozmanitých a krásných destinací v celé Evropě. Od nedotknutých pláží po historická města nabízí Evropa něco pro každého typu cestovatele. V tomto článku prozkoumáme top 10 letních destinací, které by měly být na vašem seznamu cest.</p>
+              
+              <h3>1. Santorini, Řecko</h3>
+              <p>Proslulý svými dechberoucími západy slunce, bílými budovami a průzračnou vodou je Santorini snovou destinací pro mnohé. Ostrov nabízí jedinečnou kombinaci přírodní krásy, starověké historie a živé kultury.</p>
+              
+              <h3>2. Amalfinské pobřeží, Itálie</h3>
+              <p>Amalfinské pobřeží je úsek pobřeží na jižním pobřeží Sorrentinského poloostrova v Itálii. Proslulé svými malebnými městečky, útesy a plážemi je to ideální destinace pro relaxační letní dovolenou.</p>
+              
+              <h3>3. Barcelona, Španělsko</h3>
+              <p>Barcelona kombinuje energii rušného města s relaxací na pláži. Díky své jedinečné architektuře, živému nočnímu životu a chutné kuchyni je to destinace, kterou musíte v Evropě navštívit.</p>
+            `
+          }
+        },
+        2: {
+          title: {
+            en: "How to Pack a Suitcase Without Overloading",
+            cz: "Jak sbalit kufr bez přeplnění"
+          },
+          image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1200&q=60",
+          date: "02/06/2025",
+          content: {
+            en: `
+              <h3>Introduction</h3>
+              <p>Packing for a trip can be a stressful experience, especially when you're trying to fit everything you need into a limited space. But with the right techniques and a bit of planning, you can pack efficiently without overloading your suitcase. In this article, we'll share some tips and tricks to help you pack like a pro.</p>
+              
+              <h3>1. Make a Packing List</h3>
+              <p>Before you start packing, make a list of everything you need to bring. This will help you stay organized and ensure you don't forget anything important. Divide your list into categories like clothing, toiletries, electronics, and documents.</p>
+              
+              <h3>2. Choose the Right Suitcase</h3>
+              <p>The size and type of suitcase you choose can make a big difference in how much you can pack. Consider the length of your trip and the type of activities you'll be doing. A carry-on suitcase is usually sufficient for short trips, while a larger checked bag may be necessary for longer journeys.</p>
+              
+              <h3>3. Roll Your Clothes</h3>
+              <p>Rolling your clothes instead of folding them can save a significant amount of space in your suitcase. This technique also helps prevent wrinkles and makes it easier to see what you've packed.</p>
+            `,
+            cz: `
+              <h3>Úvod</h3>
+              <p>Sbalení na cestu může být stresující zážitek, zejména když se snažíte vměstnat vše, co potřebujete, do omezeného prostoru. Ale se správnými technikami a trochou plánování můžete balit efektivně bez přetěžování kufru. V tomto článku se podělíme o některé tipy a triky, které vám pomohou balit jako profesionál.</p>
+              
+              <h3>1. Vytvořte si seznam věcí k zabalení</h3>
+              <p>Než začnete balit, vytvořte si seznam všeho, co si musíte vzít. To vám pomůže zůstat organizovaní a zajistit, že na nic důležitého nezapomenete. Rozdělte si seznam do kategorií jako oblečení, toaletní potřeby, elektronika a dokumenty.</p>
+              
+              <h3>2. Vyberte si správný kufr</h3>
+              <p>Velikost a typ kufru, který si vyberete, může mít velký vliv na to, kolik věcí můžete sbalit. Zvažte délku vaší cesty a typ aktivit, které budete dělat. Kufr jako příruční zavazadlo je obvykle dostatečný pro krátké výlety, zatímco větší odbavené zavazadlo může být nutné pro delší cesty.</p>
+              
+              <h3>3. Sbalte oblečení do rolí</h3>
+              <p>Sbalení oblečení do rolí místo skládání může ušetřit značné množství místa ve vašem kufru. Tato technika také pomáhá předcházet mačkání a usnadňuje vidět, co jste si sbalili.</p>
+            `
+          }
+        },
+        3: {
+          title: {
+            en: "Best Beaches for Perfect Relaxation",
+            cz: "Nejlepší pláže pro dokonalou relaxaci"
+          },
+          image: "https://images.unsplash.com/photo-1519451243450-1a7c1a6b8a9c?auto=format&fit=crop&w=1200&q=60",
+          date: "20/05/2025",
+          content: {
+            en: `
+              <h3>Introduction</h3>
+              <p>There's nothing quite like the feeling of soft sand between your toes and the sound of waves crashing on the shore. Beaches offer the perfect setting for relaxation, rejuvenation, and escape from the hustle and bustle of everyday life. In this article, we'll explore some of the best beaches around the world that are perfect for those seeking tranquility and natural beauty.</p>
+              
+              <h3>1. Whitehaven Beach, Australia</h3>
+              <p>Located in the heart of the Great Barrier Reef, Whitehaven Beach is known for its pristine white silica sand and crystal-clear turquoise waters. The beach stretches over seven kilometers and offers breathtaking views of the surrounding Whitsunday Islands.</p>
+              
+              <h3>2. Anse Source d'Argent, Seychelles</h3>
+              <p>With its unique granite boulders, palm-fringed shores, and shallow turquoise waters, Anse Source d'Argent is often considered one of the most photographed beaches in the world. The beach is located on La Digue Island and offers a secluded and picturesque setting.</p>
+              
+              <h3>3. Grace Bay, Turks and Caicos</h3>
+              <p>Grace Bay is a stunning 12-mile stretch of powder-soft white sand and calm, clear turquoise waters. The beach is protected by a barrier reef, which keeps the waters calm and makes it perfect for swimming and snorkeling.</p>
+            `,
+            cz: `
+              <h3>Úvod</h3>
+              <p>Není nic jako pocit měkkého písku mezi prsty a zvuk vln narážejících na břeh. Pláže nabízejí dokonalé prostředí pro relaxaci, obnovu a únik od shonu každodenního života. V tomto článku prozkoumáme některé z nejlepších pláží po celém světě, které jsou ideální pro ty, kteří hledají klid a přírodní krásu.</p>
+              
+              <h3>1. Pláž Whitehaven, Austrálie</h3>
+              <p>Umístěná v srdci Velkého bariérového útesu je pláž Whitehaven známá svým nedotknutým bílým křemičitým pískem a průzračnými tyrkysovými vodami. Pláž se táhne přes sedm kilometrů a nabízí dechberoucí výhledy na okolní ostrovy Whitsunday.</p>
+              
+              <h3>2. Pláž Anse Source d'Argent, Seychely</h3>
+              <p>Svými jedinečnými žulovými balvany, palmami lemovanými břehy a mělkými tyrkysovými vodami je pláž Anse Source d'Argent často považována za jednu z nejvíce fotografovaných pláží na světě. Pláž se nachází na ostrově La Digue a nabízí odlehlé a malebné prostředí.</p>
+              
+              <h3>3. Pláž Grace Bay, Turks a Caicos</h3>
+              <p>Grace Bay je úchvatný 12 mil dlouhý úsek práškově měkkého bílého písku a klidných, průzračných tyrkysových vod. Pláž je chráněna bariérovým útesem, který udržuje vody klidnými a činí ji ideální pro plavání a šnorchlování.</p>
+            `
+          }
+        }
+      };
+      
+      // Открытие модального окна блога
+      document.querySelectorAll('.blog-read').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const blogId = btn.getAttribute('data-blog-id');
+          const post = blogPosts[blogId];
+          
+          if (post) {
+            // Установка заголовка
+            blogModalTitle.textContent = post.title[currentLang] || post.title.en;
+            
+            // Установка изображения
+            blogModalImage.style.backgroundImage = `url('${post.image}')`;
+            
+            // Установка содержимого
+            blogModalContent.innerHTML = post.content[currentLang] || post.content.en;
+            
+            // Установка метаданных
+            blogModalMeta.innerHTML = `<i class="fa-regular fa-calendar"></i> ${post.date}`;
+            
+            // Открытие модального окна
+            blogModal.classList.add('show');
+            
+            // Сохранение ID текущего поста для шаринга
+            blogModal.setAttribute('data-blog-id', blogId);
+          }
+        });
+      });
+      
+      // Закрытие модального окна блога
+      closeBlogModal.addEventListener('click', () => {
+        blogModal.classList.remove('show');
+      });
+      
+      // Открытие модального окна шаринга
+      shareBlogPost.addEventListener('click', () => {
+        const blogId = blogModal.getAttribute('data-blog-id');
+        if (blogId) {
+          // Генерация URL для статьи
+          const articleUrl = `${window.location.origin}/blog/${blogId}`;
+          document.getElementById('articleLink').value = articleUrl;
+          
+          // Настройка ссылок для шаринга
+          document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(articleUrl)}`;
+          document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(articleUrl)}`;
+          document.getElementById('shareLinkedIn').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`;
+          document.getElementById('shareWhatsApp').href = `https://wa.me/?text=${encodeURIComponent(post.title[currentLang] || post.title.en + ' ' + articleUrl)}`;
+          
+          // Открытие модального окна шаринга
+          shareModal.classList.add('show');
+        }
+      });
+      
+      // Закрытие модального окна шаринга
+      closeShareModal.addEventListener('click', () => {
+        shareModal.classList.remove('show');
+      });
+      
+      // Копирование ссылки
+      copyLinkBtn.addEventListener('click', () => {
+        const articleLink = document.getElementById('articleLink');
+        articleLink.select();
+        document.execCommand('copy');
+        
+        // Показ уведомления о копировании
+        copyNotification.style.display = 'block';
+        setTimeout(() => {
+          copyNotification.style.display = 'none';
+        }, 2000);
+      });
+      
+      // Копирование ссылки при клике на иконку
+      document.getElementById('copyLink').addEventListener('click', (e) => {
+        e.preventDefault();
+        copyLinkBtn.click();
+      });
+    }
+    
+    // ===== Offer Modal =====
+    function initOfferModal() {
+      const offerTrigger = document.querySelector('.offer-trigger');
+      const offerModal = document.getElementById('offerModal');
+      const closeOffer = document.getElementById('closeOffer');
+      const offerForm = document.getElementById('offerForm');
+      const offerSuccess = document.getElementById('offerSuccess');
+      
+      // Показываем триггер специального предложения через 10 секунд
+      setTimeout(() => {
+        try {
+          if (!localStorage.getItem('kingHousOfferShown')) {
+            offerTrigger.style.display = 'flex';
+          }
+        } catch (e) {
+          console.error('Ошибка при проверке флага предложения:', e);
+        }
+      }, 10000);
+      
+      // При клике на триггер открываем модальное окно
+      offerTrigger.addEventListener('click', () => {
+        offerModal.classList.add('show');
+        offerTrigger.style.display = 'none';
+        try {
+          localStorage.setItem('kingHousOfferShown', 'true');
+        } catch (e) {
+          console.error('Ошибка при сохранении флага предложения:', e);
+        }
+      });
+      
+      // Закрытие модального окна
+      closeOffer.addEventListener('click', () => {
+        offerModal.classList.remove('show');
+      });
+      
+      // Обработка формы специального предложения
+      offerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('offerEmail').value;
+        
+        // Показываем сообщение об успехе
+        offerSuccess.style.display = 'block';
+        
+        // Генерируем промокод
+        const promoCode = 'TRAVEL10';
+        document.getElementById('promoCodeValue').textContent = promoCode;
+        
+        // Сохраняем промокод
+        try {
+          localStorage.setItem('kingHousPromoCode', promoCode);
+        } catch (e) {
+          console.error('Ошибка при сохранении промокода:', e);
+        }
+        
+        // Очищаем форму
+        offerForm.reset();
+        
+        // Показываем уведомление
+        showNotification((translations[currentLang].promoCodeSent || 'Promo code sent to ') + email);
+      });
+    }
+    
+    // ===== Form Validation =====
+    function initFormValidation() {
+      const form = document.getElementById('contactForm');
+      const formInputs = form.querySelectorAll('input, select, textarea');
+      
+      // Валидация при потере фокуса
+      formInputs.forEach(input => {
+        input.addEventListener('blur', () => {
+          if (input.hasAttribute('required') && !input.value.trim()) {
+            input.style.borderColor = '#e74c3c';
+          } else {
+            input.style.borderColor = '';
+          }
+        });
+        
+        input.addEventListener('input', () => {
+          if (input.style.borderColor === 'rgb(231, 76, 60)' && input.value.trim()) {
+            input.style.borderColor = '';
+          }
+        });
+      });
+      
+      // Валидация email
+      const emailInput = document.getElementById('email');
+      emailInput.addEventListener('blur', () => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailInput.value.trim() && !emailRegex.test(emailInput.value.trim())) {
+          emailInput.style.borderColor = '#e74c3c';
+        }
+      });
+      
+      // Форматирование номера телефона
+      const phoneInput = document.getElementById('phone');
+      phoneInput.addEventListener('input', (e) => {
+        let value = e.target.value.replace(/\D/g, '');
+        let formattedValue = '';
+        
+        if (value.length > 0) {
+          formattedValue = '+' + value.substring(0, 3);
+          if (value.length > 3) {
+            formattedValue += ' ' + value.substring(3, 5);
+            if (value.length > 5) {
+              formattedValue += ' ' + value.substring(5, 8);
+              if (value.length > 8) {
+                formattedValue += ' ' + value.substring(8, 12);
+              }
+            }
+          }
+        }
+        
+        e.target.value = formattedValue;
+      });
+      
+      // Обработка отправки формы
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Проверка валидности
+        let isValid = true;
+        formInputs.forEach(input => {
+          if (input.hasAttribute('required') && !input.value.trim()) {
+            input.style.borderColor = '#e74c3c';
+            isValid = false;
+          }
+        });
+        
+        // Дополнительная проверка email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailInput.value.trim() && !emailRegex.test(emailInput.value.trim())) {
+          emailInput.style.borderColor = '#e74c3c';
+          isValid = false;
+        }
+        
+        if (!isValid) {
+          showNotification(translations[currentLang].formError || 'Please fill in all required fields correctly');
+          return;
+        }
+        
+        // Показываем уведомление об успехе
+        const email = form.email.value || 'provided contact';
+        showNotification((translations[currentLang].formSuccess || 'Thank you! We will contact you at ') + email);
+        
+        // Очищаем форму
+        form.reset();
+        
+        // Сбрасываем стили валидации
+        formInputs.forEach(input => {
+          input.style.borderColor = '';
+        });
+      });
+    }
+    
+    // ===== Animations =====
+    function initAnimations() {
+      // Анимация карточек при загрузке
+      window.addEventListener('load', () => {
+        animateCards();
+      });
+      
+      // Анимация при прокрутке
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const cards = entry.target.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, index * 100);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // Наблюдение за секциями с карточками
+      document.querySelectorAll('section').forEach(section => {
+        if (section.querySelector('.card')) {
+          observer.observe(section);
+        }
+      });
+      
+      // Анимация чисел в статистике
+      const statsSection = document.querySelector('.stats');
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateNumbers();
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      if (statsSection) {
+        statsObserver.observe(statsSection);
+      }
+    }
+    
+    // Анимация карточек
+    function animateCards() {
+      const cards = document.querySelectorAll('.card');
+      
+      cards.forEach((card, index) => {
+        // Применяем анимацию только к невидимым карточкам
+        if (card.style.opacity === '0' || card.style.opacity === '') {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
+          
+          setTimeout(() => {
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, index * 100);
+        }
+      });
+    }
+    
+    // Анимация чисел
+    function animateNumbers() {
+      const stats = document.querySelectorAll('.stat .n');
+      
+      stats.forEach(stat => {
+        const target = parseInt(stat.innerText);
+        let current = 0;
+        const increment = target / 50;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          
+          // Форматируем число с разделителями тысяч
+          stat.innerText = Math.floor(current).toLocaleString();
+        }, 30);
+      });
+    }
+    
+    // ===== Accessibility =====
+    function initAccessibility() {
+      // Улучшение доступности для пользователей клавиатуры
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+          document.body.classList.add('user-is-tabbing');
+        }
+      });
+      
+      document.addEventListener('mousedown', () => {
+        document.body.classList.remove('user-is-tabbing');
+      });
+      
+      // Обработка фокуса для модальных окон
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        modal.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            modal.classList.remove('show');
+          }
+        });
+      });
+    }
+    
+    // ===== Performance Optimizations =====
+    function initPerformanceOptimizations() {
+      // Отложенная загрузка изображений
+      const lazyLoadImages = () => {
+        const images = document.querySelectorAll('img[data-src]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
+            }
+          });
+        });
+        
+        images.forEach(img => {
+          imageObserver.observe(img);
+        });
+      };
+      
+      // Запускаем отложенную загрузку изображений
+      lazyLoadImages();
+      
+      // Оптимизация обработчика прокрутки
+      let scrollTimeout;
+      window.addEventListener('scroll', () => {
+        if (!scrollTimeout) {
+          scrollTimeout = setTimeout(() => {
+            // Здесь может быть код, который нужно выполнить при прокрутке
+            scrollTimeout = null;
+          }, 100);
+        }
+      }, { passive: true });
+      
+      // Оптимизация изменения размера окна
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          // Здесь может быть код, который нужно выполнить при изменении размера
+        }, 250);
+      });
+      
+      // Проверка поддержки touch событий
+      function isTouchDevice() {
+        return 'ontouchstart' in window || 
+               navigator.maxTouchPoints > 0 || 
+               navigator.msMaxTouchPoints > 0;
+      }
+      
+      // Добавляем класс для touch устройств
+      if (isTouchDevice()) {
+        document.body.classList.add('touch-device');
+      }
+    }
+    
+    // ===== Utility Functions =====
+    
+    // Форматирование валюты
+    function formatCurrency(amount) {
+      try {
+        return new Intl.NumberFormat('de-DE', { 
+          style: 'currency', 
+          currency: 'EUR',
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        }).format(amount);
+      } catch (e) {
+        console.error('Ошибка форматирования валюты:', e);
+        return '€' + amount;
+      }
+    }
+    
+    // Отрисовка корзины
+    function renderCart() {
+      const wrap = document.getElementById('cartItems');
+      if (cart.length === 0) {
+        wrap.className = 'badge';
+        wrap.textContent = translations[currentLang].emptyCart || 'Cart is empty';
+        return;
+      }
+      
+      wrap.classList.remove('badge');
+      wrap.innerHTML = '';
+      const ul = document.createElement('ul');
+      ul.style.margin = '0';
+      ul.style.padding = '0 0 0 16px';
+      let total = 0;
+      
+      cart.forEach(it => {
+        total += it.price;
+        const li = document.createElement('li');
+        li.textContent = `${it.name} — ${formatCurrency(it.price)}`;
+        ul.appendChild(li);
+      });
+      
+      wrap.appendChild(ul);
+      
+      const t = document.createElement('div');
+      t.style.marginTop = '8px';
+      t.innerHTML = `<strong>${translations[currentLang].total || 'TOTAL'}: ${formatCurrency(total)}</strong>`;
+      wrap.appendChild(t);
+    }
+    
+    // Показ уведомления
+    function showNotification(message) {
+      const notification = document.createElement('div');
+      notification.className = 'notification';
+      notification.textContent = message;
+      document.body.appendChild(notification);
+      
+      // Удаление уведомления через 5 секунд
+      setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity 0.5s';
+        setTimeout(() => {
+          if (notification.parentNode) {
+            notification.remove();
+          }
+        }, 500);
+      }, 5000);
+    }
+    
+    // Напоминание о корзине
+    function checkCartReminder() {
+      // Показываем напоминание о корзине через 30 секунд, если в корзине есть товары
+      setTimeout(() => {
+        try {
+          if (cart.length > 0 && !localStorage.getItem('kingHousCartReminderShown')) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.style.display = 'flex';
+            notification.style.alignItems = 'center';
+            notification.style.justifyContent = 'space-between';
+            notification.style.maxWidth = '400px';
+            
+            const message = document.createElement('span');
+            message.textContent = translations[currentLang].cartReminder || 'You have items in your cart. Complete your order!';
+            
+            const button = document.createElement('button');
+            button.className = 'btn';
+            button.textContent = translations[currentLang].completeOrder || 'Complete Order';
+            button.style.marginLeft = '10px';
+            button.addEventListener('click', () => {
+              document.getElementById('checkoutModal').classList.add('show');
+              renderCart();
+              notification.remove();
+            });
+            
+            notification.appendChild(message);
+            notification.appendChild(button);
+            document.body.appendChild(notification);
+            
+            // Сохраняем флаг, что напоминание было показано
+            localStorage.setItem('kingHousCartReminderShown', 'true');
+            
+            // Удаление уведомления через 10 секунд
+            setTimeout(() => {
+              notification.style.opacity = '0';
+              notification.style.transition = 'opacity 0.5s';
+              setTimeout(() => {
+                if (notification.parentNode) {
+                  notification.remove();
+                }
+              }, 500);
+            }, 10000);
+          }
+        } catch (e) {
+          console.error('Ошибка в функции checkCartReminder:', e);
+        }
+      }, 30000);
+    }
+    
+    // Запуск проверки напоминания о корзине
+    checkCartReminder();
+  </script>
+</body>
+</html>
